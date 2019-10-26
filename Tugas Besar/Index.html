@@ -5,22 +5,122 @@
 		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="script.js"></script>
+
+        <style type="text/css">
+        	#myInput{
+        		border-radius: 20px;
+        		height: 30px;
+        		font-size: 20px;
+        		text-align: center;
+        		background-color: lightgrey;
+        		align-content: center;
+        	}
+
+        	#logo{
+        		margin-left: 50px;
+        		width: 150px;
+        		height: 150px;
+        		align-items: center;
+        		color: blue;
+        	}
+
+        	.search{
+                position: relative;
+                display: inline-block;
+            }
+            .search-items{
+                position: absolute;
+                border: 1px solid #d4d4d4;
+                z-index: 99;
+                top: 100%;
+                width: 275px;
+            }
+
+            .search-items div{
+                padding: 10px;
+                cursor: pointer;
+                background-color: #fff;
+                border-bottom: 1px solid #d4d4d4;
+            }
+
+            .searcg-items div:hover{
+                background-color: #e9e9e9;
+            }
+
+            .search-active{
+                background-color: DodgerBlue !important;
+                color: #ffffff;
+            }
+
+            h1{
+            	padding-top: 35px;
+            }
+
+            #div_search{
+            	padding-top: 120px;
+            }
+
+            .sign{
+            	border-radius: 10px;
+            	width: 100px;
+            	height: 30px;
+            }
+
+            #div_sign{
+            	padding: 20px;
+            }
+        </style>
     </head>
     <body>
         <header>
-        	<img src="images/"
+        	<div>
+        		<div style="width: 20%; float: left; margin-right: 100px">
+        			<img src="images/logoDFB.jpeg" id="logo">	
+        		</div>
+        		<div style="float: left;">
+        			<h1>
+        				Selamat Datang di Download Film Baru
+        			</h1>
+        		</div>
+        	</div>
+        	
         	<!-- home,  -->
-            <div class="w3-bar w3-flat-belize-hole">
+
+        	<div class="w3-display-topright" id="div_sign">
+        		<button class="sign">
+        			Sign In
+        		</button>
+        		<button class="sign">
+        			Sign Up
+        		</button>
+        	</div>
+
+        	<div id="div_search" style="float: right;">
+        	    <div class="search" style="float: right;">
+	            	<input  id="myInput" type="text" name="search" placeholder="search">
+
+    	        </div>	
+
+    	        <div style="float:right">
+ 					<i class= "fa fa-search" style="margin-right: 10px">
+	        	</i>
+		        </div>
+        	</div>
+
+        	<div class="w3-bar w3-flat-belize-hole">
                 <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="openContent(this,'profile')">Home</button>	
-                <button class="w3-button w3-bar-item tablink" onclick="openContent(this,'akademik')">Akademik</button>	
-                <button class="w3-button w3-bar-item tablink" onclick="openContent(this,'agenda')">Agenda</button>	
+           		<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'akademik')">Akademik</button>	
+            	<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'agenda')">Agenda</button>	
             </div>
+
         </header>
+
         <div class="tabs w3-padding" id="profile">
 			<div class="w3-border-bottom">
 				<h2 class="w3-border-bottom">Profile</h2>
@@ -134,3 +234,6 @@
 		</div>
     </body>
 </html>
+<script type="text/javascript">
+	autocomplete(document.getElementById("myInput"),fruits);
+</script>
