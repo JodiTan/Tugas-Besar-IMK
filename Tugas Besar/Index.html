@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Tugas Besar IMK</title>
+		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <header>
+        	<img src="images/"
+        	<!-- home,  -->
+            <div class="w3-bar w3-flat-belize-hole">
+                <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="openContent(this,'profile')">Home</button>	
+                <button class="w3-button w3-bar-item tablink" onclick="openContent(this,'akademik')">Akademik</button>	
+                <button class="w3-button w3-bar-item tablink" onclick="openContent(this,'agenda')">Agenda</button>	
+            </div>
+        </header>
+        <div class="tabs w3-padding" id="profile">
+			<div class="w3-border-bottom">
+				<h2 class="w3-border-bottom">Profile</h2>
+				<p>Nama: Mahasiswa</p>
+				<p>NPM: 20160065</p>
+				<p>Dosen Wali: Husnul Hakim, M.T.</p>
+			</div>
+			<div class="w3-containter">
+				<h5>Unggah foto profil</h5>
+				<div class="upload-drop-zone" id="drop-zone" style="display: block;">
+					Drag and drop your photo
+				</div>
+			</div>
+			<div class = "w3-btn w3-flat-peter-river">Unggah
+			</div>
+		</div>
+
+		<div class="tabs w3-padding" id="akademik" style="display: none">
+			<h2 class="w3-border-bottom">Akademik</h2>
+			<p>Konten untuk akademik</p>
+		</div>
+
+		<div class="tabs w3-padding" id="agenda" style="display: none; width: 100%">
+			<h2 class="w3-border-bottom">Agenda</h2>
+			<button class="w3-button w3-flat-belize-hole" onclick="showCont('Kuliah')" style="width:100%; text-align: left;">Jadwal Kuliah</button>
+			<table class="w3-table w3-bordered w3-hide" id="Kuliah" style="width: 100%">
+				<tr>
+					<th>Mata Kuliah</th>
+					<th>Dosen</th>
+					<th>Ruangan</th>
+					<th>Hari</th>
+					<th style="padding-right : 20px">Jam</th>
+				</tr>
+				<tr>
+					<td rowspan="2">PUK</td>
+					<td>Keenan Leman</td>
+					<td>9121</td>
+					<td>Senin</td>
+					<td>13-15</td>
+				</tr>
+				<tr>
+					<td>Maria Veronica</td>
+					<td>9121</td>
+					<td>Senin</td>
+					<td>15-17</td>
+				</tr>
+				<tr>
+					<td rowspan="2">IMK</td>
+					<td>Maria Veronica</td>
+					<td>9018</td>
+					<td>Kamis</td>
+					<td>10.00</td>
+				</tr>
+				<tr>
+					<td>Marshal</td>
+					<td>9016</td>
+					<td>Kamis</td>
+					<td>10.00</td>
+				</tr>
+			</table>
+			<button class="w3-button w3-flat-belize-hole" onclick="showCont('UTS')" style="width:100%; text-align: left;">Jadwal UTS</button>
+			<table class="w3-table w3-bordered w3-hide" id="UTS">
+				<tr>
+					<th>Mata Kuliah</th>
+					<th>Dosen</th>
+					<th>Ruangan</th>
+					<th>Tanggal</th>
+					<th style="padding-right : 20px">Jam</th>
+				</tr>
+				<tr>
+					<td>IMK</td>
+					<td>Keenan Leman</td>
+					<td>9001</td>
+					<td>17 Agustus</td>
+					<td>07-09</td>
+				</tr>
+				<tr>
+					<td>PUK</td>
+					<td>Maria Veronica</td>
+					<td>9002</td>
+					<td>18 Agustus</td>
+					<td>13-15</td>
+				</tr>
+			</table>
+			<button class="w3-button w3-flat-belize-hole" onclick="showCont('UAS')" style="width:100%; text-align: left;">Jadwal UAS</button>
+			<table class="w3-table w3-bordered w3-hide" id="UAS">
+				<tr>
+					<th>Mata Kuliah</th>
+					<th>Dosen</th>
+					<th>Ruangan</th>
+					<th>Hari</th>
+					<th style="padding-right : 20px">Jam</th>
+				</tr>
+				<tr>
+					<td>IMK</td>
+					<td>Keenan Leman</td>
+					<td>9001</td>
+					<td>17 Agustus</td>
+					<td>07-09</td>
+				</tr>
+				<tr>
+					<td>PUK</td>
+					<td>Maria Veronica</td>
+					<td>9002</td>
+					<td>18 Agustus</td>
+					<td>13-15</td>
+				</tr>
+			</table>
+			<button class="w3-button w3-flat-belize-hole" onclick="showCont('Kegiatan')" style="width:100%; text-align: left;">Jadwal Kegiatan</button>
+			<div class="w3-hide" id="Kegiatan">...</div>
+		</div>
+    </body>
+</html>
