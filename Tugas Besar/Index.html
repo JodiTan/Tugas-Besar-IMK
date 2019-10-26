@@ -15,6 +15,44 @@
         <style type="text/css">
         	
         </style>
+
+        <script>
+
+        //login
+        $(document).ready(function () {
+            $(document.getElementById('btn_login')).click(function () {
+                $(document.getElementById('login1')).animate({
+                    top: '400px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $(document.getElementById('login_close')).click(function () {
+                $(document.getElementById('login1')).animate({
+                    top: '-400px'
+                });
+            });
+        });
+
+        //sign up
+        $(document).ready(function () {
+            $(document.getElementById('btn_signup')).click(function () {
+                $(document.getElementById('signup1')).animate({
+                    top: '500px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $(document.getElementById('close_signup')).click(function () {
+                $(document.getElementById('signup1')).animate({
+                    top: '-500px'
+                });
+            });
+        });
+
+    </script>
     </head>
     <body>
         <header>
@@ -32,17 +70,13 @@
         	<!-- home,  -->
 
         	<div class="w3-display-topright" id="div_sign">
-        		<button class="sign">
-        			Sign In
-        		</button>
-        		<button class="sign">
-        			Sign Up
-        		</button>
+        		<input type="button" id="btn_login" value="Log In" style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;" onclick="document.getElementById('login').style.display='block'">
+        	<input type="button" id="btn_signup" value="Sign Up" style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;" onclick="document.getElementById('signup').style.display='block'">
         	</div>
 
         	<div id="div_search" style="float: right;">
         	    <div class="search" style="float: right;">
-	            	<input  id="myInput" type="text" name="search" placeholder="search">
+	            	<input  id="myInput" type="text" name="search" placeholder="search here">
 
     	        </div>	
 
@@ -59,6 +93,103 @@
             </div>
 
         </header>
+
+        <div id="signup" class="w3-modal">
+        	<div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center;  margin-top: -500px" id="signup1">
+            	<span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright" id="close_signup">
+ 	               &times;
+            	</span>
+            	<b>Sign Up</b>
+            	<br>
+            	<br>
+            	<form>
+                	<table align="center">
+                    	<tr>
+                        	<th>
+                            	Username
+                        	</th>
+                        	<td>
+                        	    :
+                        	</td>
+                        	<td>
+                        	    <input type="text">
+                        	</td>
+                    	</tr>
+	                    <tr>
+	                        <th>
+	                            E-mail
+	                        </th>
+	                        <td>
+	                            :
+	                        </td>
+	                        <td>
+	                            <input type="email">
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <th>
+	                            Password
+	                        </th>
+	                        <td>
+	                            :
+	                        </td>
+	                        <td>
+	                            <input type="password">
+	                        </td>
+	                    </tr>
+	                </table>
+	                <br>
+	                <input type="checkbox"> I already agree to the <a href="#" style="color: blue">Terms and Conditions</a>
+	                <br>
+	                <br>
+	                <input type="submit" value="Sign Up" style="margin: 20px">
+
+	            </form>
+	        </div>
+    	</div>
+
+	    <div class="w3-modal" id="login">
+	        <!--  margin-top: -400px -->
+	        <div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center; margin-top: -400px" id="login1">
+	            <span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-display-topright" id="login_close">
+	                &times;
+	            </span>
+	            <b>Sign In</b>
+	            <br>
+	            <br>
+	            <form>
+	                <table align="center">
+	                    <tr>
+	                        <th>
+	                            Username / E-mail
+	                        </th>
+	                        <td>
+	                            :
+	                        </td>
+	                        <td>
+	                            <input type="text">
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <th>
+	                            Password
+	                        </th>
+	                        <td>
+	                            :
+	                        </td>
+	                        <td>
+	                            <input type="password">
+	                        </td>
+	                    </tr>
+	                </table>
+	                <br>
+	                <a href="SignIn.html">
+	                    <input type="button" value="Sign In" style="margin: 20px">
+	                </a>
+
+	            </form>
+	        </div>
+	    </div>
 
         <div class="tabs w3-padding" id="profile">
 			<div class="w3-border-bottom">
