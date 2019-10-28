@@ -1,136 +1,424 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Download Film Terbaru dan Berkualitas di DownloadFilmBaru</title>
-        <link rel="stylesheet" href="css/header.css" type="text/css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-        <script type="text/javascript">
-            var i, x, tablinks;
+<head>
+    <title>Download Film Terbaru dan Berkualitas di DownloadFilmBaru</title>    
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
 
-            x = document.getElementsByClassName("tabs");
-            for (i = 0; i < x.length;x i++) {
-                x[i].style.display = "none";
+    <script type="text/javascript">
+        var i, x, tablinks;
+
+        x = document.getElementsByClassName("tabs");
+        for (i = 0; i < x.length; x i++) {
+            x[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-flat-peter-river", "");
+        }
+
+        document.getElementById(idContentContainer).style.display = "block";
+        obj.className += " w3-flat-peter-river";
+
+
+        function showCont(id) {
+            var x = document.getElementById(id);
+
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
             }
-
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" w3-flat-peter-river", "");
+            else {
+                x.className = x.className.replace(" w3-show", "");
             }
+        }
+    </script>
 
-            document.getElementById(idContentContainer).style.display = "block";
-            obj.className += " w3-flat-peter-river";
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <style>
+        input {
+            border: 1px solid transparent;
+            background-color: #f1f1f1;
+            padding: 10px;
+            font-size: 16px;
+        }
 
-            function showCont(id) {
-                var x = document.getElementById(id);
+        body {
+            font: 16px Arial;
+        }
 
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                }
-                else {
-                    x.className = x.className.replace(" w3-show", "");
-                }
-            }
-        </script>
+        input[type=text] {
+            background-color: #f1f1f1;
+            width: 100%;
+        }
 
-        <script type="text/javascript" src="script.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        .search {
+            position: relative;
+            display: inline-block;
+        }
 
-        <style>
-            input{
-                border: 1px solid transparent;
-                background-color: #f1f1f1;
-                padding: 10px;
-                font-size: 16px;
-            }
-            body{
-                font: 16px Arial;
-            }
-            input[type=text]{
-                background-color: #f1f1f1;
-                width: 100%;
-            }
-            .search{
-                position: relative;
-                display: inline-block;
-            }
-            .search-items{
-                position: absolute;
-                border: 1px solid #d4d4d4;
-                border-bottom: none;
-                border-top: none;
-                z-index: 99;
-                top: 100%;
-                left: 0;
-                right: 0;
-            }
-            .search-items div{
-                padding: 10px;
-                cursor: pointer;
-                background-color: #fff;
-                border-bottom: 1px sllid #d4d4d4;
-            }
-            .searcg-items div:hover{
-                background-color: #e9e9e9;
-            }
-            .search-active{
-                background-color: DodgerBlue !important;
-                color: #ffffff;
-            }
+        .search-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
 
-        </style>
-    </head>
+        .search-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px sllid #d4d4d4;
+        }
 
-    <body>
-        <header>
-        	<div>
-        		<div style="width: 20%; float: left; margin-right: 100px">
-        			<img src="images/logoDFB.jpeg" id="logo">	
-        		</div>
-        		<div style="float: left;">
-        			<h1>
-        				Selamat Datang di Download Film Baru
-        			</h1>
-        		</div>
-        	</div>
-        	
-        	<!-- home,  -->
+        .searcg-items div:hover {
+            background-color: #e9e9e9;
+        }
 
-        	<div class="w3-display-topright welcome" >
-        		<h3 style="margin-right: 30px;">Welcome, User!</h3>
-        		<button class="sign">
-        			<a href="index.html">Log Out</a>
-        		</button>
-        	</div>
+        .search-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+    </style>
+</head>
 
-        	<div id="div_search" style="float: right;">
-        	    <div class="search" style="float: right;">
-	            	<input  id="myInput" type="text" name="search" placeholder="Search..">
-
-    	        </div>	
-
-    	        <div style="float:right">
- 					<i class= "fa fa-search" style="margin-right: 10px">
-    	        	</i>
-		        </div>
-        	</div>
-
-        	<div class="w3-bar w3-flat-belize-hole">
-                <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="openContent(this,'profile')">Home</button>	
-           		<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'akademik')">Genre</button>	
-            	<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'agenda')">New Release</button>	
+<body>
+    <header>
+        <div>
+            <div style="width: 20%; float: left; margin-right: 100px">
+                <img src="images/logoDFB.jpeg" id="logo">
             </div>
-        </header>
-    </body>
-</html>
+            <div style="float: left;">
+                <h1>
+                    Selamat Datang di Download Film Baru
+                </h1>
+            </div>
+        </div>
 
-<script type="text/javascript">
-    
+        <div class="w3-display-topright welcome">
+            <h3 style="margin-right: 30px;">Welcome, User!</h3>
+            <button class="sign">
+                <a href="index.html">Log Out</a>
+            </button>
+        </div>
+
+        <div id="div_search" style="float: right;">
+            <div class="search" style="float: right;">
+                <input id="myInput" type="text" name="search" placeholder="Search..">
+            </div>
+
+            <div style="float:right">
+                <i class="fa fa-search" style="margin-right: 10px">
+                </i>
+            </div>
+        </div>
+    </header>
+    <!--Apa perlu carousel untuk iklan?-->
+    <!--Tabbed navigation bar-->
+    <div class="w3-bar w3-flat-belize-hole">
+        <button class="w3-button w3-bar-item w3-flat-peter-river tablink"
+            onclick="openContent(this,'home')">Home</button>
+        <button class="w3-button w3-bar-item tablink" onclick="openContent(this,'genre')">Genre</button>
+        <button class="w3-button w3-bar-item tablink" onclick="openContent(this,'popular')">Most Downloaded</button>
+        <button class="w3-button w3-bar-item tablink" onclick="openContent(this, 'recommended')">Recommended</button>
+    </div>
+
+    <!--Containers untuk tabbed layout-->
+    <div id="home" class="w3-container tabs">
+        <div class="w3-border-bottom">
+            <h3>Home</h3>
+        </div>
+        <br>
+        <table>
+            <tr>
+                <td><img src="images/JohnWick.png" alt="John Wick: Parabellum" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/TheImitationGame.png" alt="The Imitation Game" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/2012.png" alt="2012" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/AStarIsBorn.png" alt="A Star is Born" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/ManInBlack.png" alt="Man In Black International" style="width: 300px; height: 300px; padding: 10px;"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center;">
+                    <h6><b>John Wick: Parabellum</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>The Imitation Game</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>2012</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>A Star is Born</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Man In Black International</b></h6>
+                </th>
+            </tr>
+            <tr>
+                <td><img src="images/CaptainAmerica1.png" alt="Captain America: The First Avenger" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/Avatar.png" alt="Avatar" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/AvengersEndgame.png" alt="Avengers: Endgame" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/Armageddon.png" alt="Armageddon" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/Barbie.png" alt="Barbie" style="width: 300px; height: 300px; padding: 10px;"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center;">
+                    <h6><b>Captain America: The First Avenger</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Avatar</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Avengers: Endgame</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Armageddon</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Barbie</b></h6>
+                </th>
+            </tr>
+            <tr>
+                <td><img src="images/Annabelle.png" alt="Annabelle" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/AvengersInfinityWar.png" alt="Avengers: Infinity War" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/ABeautifulMind.png" alt="A Beautiful Mind" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/TheTheoryOfEverything.png" alt="The Theory of Everything" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight" style="width: 300px; height: 300px; padding: 10px;"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center;">
+                    <h6><b>Annabelle</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Avengers: Infinity War</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>A Beautiful Mind</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>The Theory of Everything</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Batman: The Dark Knight</b></h6>
+                </th>
+            </tr>
+        </table>
+        <!--Nantinya di sini ada pagination-->
+    </div>
+    <div id="genre" class="w3-container tabs">
+        <div class="w3-border-bottom">
+            <h3>Genre</h3>
+        </div>
+        <br>
+        <div onclick="showCont('filmAction')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-belize-hole w3-left-align">
+            <h4>Action</h4>
+        </div>
+        <div id="filmAction" class="w3-hide">
+            <table>
+                <tr>
+                    <td><img src="images/2012.png" alt="2012" style="width: 300px; height: 300px; padding: 10px;"></td>
+                    <td><img src="images/Barbie.png" alt="Barbie" style="width: 300px; height: 300px; padding: 10px;"></td>
+                    <td><img src="images/AvengersEndgame.png" alt="Avengers: Endgame" style="width: 300px; height: 300px; padding: 10px;"></td>
+                    <td><img src="images/JohnWick.png" alt="John Wick: Parabellum" style="width: 300px; height: 300px; padding: 10px;"></td>
+                    <td><img src="images/Avatar.png" alt="The Imitation Game" style="width: 300px; height: 300px; padding: 10px;"></td>
+                </tr>
+                <tr>
+                    <th style="text-align: center;">
+                        <h6><b>2012</b></h6>
+                    </th>
+                    <th style="text-align: center;">
+                        <h6><b>Barbie</b></h6>
+                    </th>
+                    <th style="text-align: center;">
+                        <h6><b>Avengers: Endgame</b></h6>
+                    </th>
+                    <th style="text-align: center;">
+                        <h6><b>John Wick: Parabellum</b></h6>
+                    </th>
+                    <th style="text-align: center;">
+                        <h6><b>Avatar</b></h6>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div onclick="showCont('filmAdventure')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-peter-river w3-left-align">
+            <h4>Adventure</h4>
+        </div>
+        <div id="filmAdventure" class="w3-hide">
+            <table>
+                <tr>
+                    <td><img src="images/JohnWick.png" alt="" style="width: 300px; height: 300px; padding: 10px;"></td>
+                    <td><img src="images/JohnWick.png" alt="" style="width: 300px; height: 300px; padding: 10px;"></td>
+                    <td><img src="images/JohnWick.png" alt="" style="width: 300px; height: 300px; padding: 10px;"></td>
+                    <td><img src="images/JohnWick.png" alt="" style="width: 300px; height: 300px; padding: 10px;"></td>
+                    <td><img src="images/JohnWick.png" alt="" style="width: 300px; height: 300px; padding: 10px;"></td>
+                </tr>
+                <tr>
+                    <th style="text-align: center;">
+                        <h6><b>John Wick: Parabellum</b></h6>
+                    </th>
+                    <th style="text-align: center;">
+                        <h6><b>John Wick: Parabellum</b></h6>
+                    </th>
+                    <th style="text-align: center;">
+                        <h6><b>John Wick: Parabellum</b></h6>
+                    </th>
+                    <th style="text-align: center;">
+                        <h6><b>John Wick: Parabellum</b></h6>
+                    </th>
+                    <th style="text-align: center;">
+                        <h6><b>John Wick: Parabellum</b></h6>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div onclick="showCont('filmAnime')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-belize-hole w3-left-align">
+            <h4>Anime</h4>
+        </div>
+        <div id="filmAnime" class="w3-hide"></div>
+        <div onclick="showCont('filmCartoon')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-peter-river w3-left-align">
+            <h4>Cartoon</h4>
+        </div>
+        <div id="filmCartoon" class="w3-hide"></div>
+        <div onclick="showCont('filmComedy')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-belize-hole w3-left-align">
+            <h4>Comedy</h4>
+        </div>
+        <div id="filmComedy" class="w3-hide"></div>
+        <div onclick="showCont('filmDrama')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-peter-river w3-left-align">
+            <h4>Drama</h4>
+        </div>
+        <div id="filmDrama" class="w3-hide"></div>
+        <div onclick="showCont('filmFantasy')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-belize-hole w3-left-align">
+            <h4>Fantasy</h4>
+        </div>
+        <div id="filmFantasy" class="w3-hide"></div>
+        <div onclick="showCont('filmHorror')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-peter-river w3-left-align">
+            <h4>Horror</h4>
+        </div>
+        <div id="filmHorror" class="w3-hide"></div>
+        <div onclick="showCont('filmRomance')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-belize-hole w3-left-align">
+            <h4>Romance</h4>
+        </div>
+        <div id="filmRomance" class="w3-hide"></div>
+        <div onclick="showCont('filmSci-Fi')" style="width: 100%;"
+            class="w3-container w3-button w3-flat-peter-river w3-left-align">
+            <h4>Sci-Fi</h4>
+        </div>
+        <div id="filmSci-Fi" class="w3-hide"></div>
+    </div>
+    <div id="popular" class="w3-container tabs">
+        <div class="w3-border-bottom">
+            <h3>Top 10 Popular</h3>
+        </div>
+        <br>
+        <table>
+            <tr>
+                <td><img src="images/Avatar.png" alt="Avatar" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/JohnWick.png" alt="John Wick: Parabellum" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/AvengersEndgame.png" alt="Avengers: Endgame" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/AvengersInfinityWar.png" alt="Avengers: Infinity War" style="width: 300px; height: 300px; padding: 10px;"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center;">
+                    <h6><b>Avatar</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Batman: The Dark Knight</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>John Wick: Parabellum</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Avengers: Endgame</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Avengers: Infinity War</b></h6>
+                </th>
+            </tr>
+            <tr>
+                <td><img src="images/TheImitationGame.png" alt="The Imitation Game" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/ManInBlack.png" alt="Man In Black International" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/Annabelle.png" alt="Annabelle" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/Barbie.png" alt="Barbie" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/2012.png" alt="2012" style="width: 300px; height: 300px; padding: 10px;"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center;">
+                    <h6><b>The Imitation Game</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Man In Black International</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Annabelle</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Barbie</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>2012</b></h6>
+                </th>
+            </tr>
+        </table>
+        <!--Nantinya di sini ada pagination-->
+    </div>
+    <div id="recommended" class="w3-container tabs">
+        <div class="w3-border-bottom">
+            <h3>Recommended for this week!</h3>
+        </div>
+        <br>
+        <table>
+            <tr>
+                <td><img src="images/Barbie.png" alt="Barbie" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/ABeautifulMind.png" alt="A Beautiful Mind" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/Avatar.png" alt="Avatar" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/JohnWick.png" alt="John Wick: Parabellum" style="width: 300px; height: 300px; padding: 10px;"></td>
+                <td><img src="images/CaptainAmerica1.png" alt="Captain America: The First Avenger" style="width: 300px; height: 300px; padding: 10px;"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center;">
+                    <h6><b>Barbie</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>A Beautiful Mind</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Avatar</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>John Wick: Parabellum</b></h6>
+                </th>
+                <th style="text-align: center;">
+                    <h6><b>Captain America: The First Avenger</b></h6>
+                </th>
+            </tr>
+        </table>
+</body>
+<script type="text/javascript" src="script.js">
+
     var i, x, tablinks;
 
     x = document.getElementsByClassName("tabs");
@@ -257,3 +545,5 @@
     autocomplete(document.getElementById("myInput"), films);
 
 </script>
+
+</html>
