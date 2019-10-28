@@ -2,22 +2,47 @@
 <html>
     <head>
 		<title>Tugas Besar IMK</title>
+
 		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" href="css/header.css">
 
-        <style type="text/css">
-        	
-        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+            var i, x, tablinks;
+
+            x = document.getElementsByClassName("tabs");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-flat-peter-river", "");
+            }
+
+            document.getElementById(idContentContainer).style.display = "block";
+            obj.className += " w3-flat-peter-river";
+
+
+            function showCont(id) {
+                var x = document.getElementById(id);
+
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                }
+                else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
 
         <script>
-
         //login
         $(document).ready(function () {
             $(document.getElementById('btn_login')).click(function () {
@@ -72,18 +97,6 @@
         	<div class="w3-display-topright" id="div_sign">
         		<input type="button" id="btn_login" value="Log In" style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;" onclick="document.getElementById('login').style.display='block'">
         	<input type="button" id="btn_signup" value="Sign Up" style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;" onclick="document.getElementById('signup').style.display='block'">
-        	</div>
-
-        	<div id="div_search" style="float: right;">
-        	    <div class="search" style="float: right;">
-	            	<input  id="myInput" type="text" name="search" placeholder="search here">
-
-    	        </div>	
-
-    	        <div style="float:right">
- 					<i class= "fa fa-search" style="margin-right: 10px">
-	        	</i>
-		        </div>
         	</div>
 
         	<div class="w3-bar w3-flat-belize-hole">
@@ -183,11 +196,11 @@
 	                    </tr>
 	                </table>
 	                <br>
-	                <a href="SignIn.html">
+	                <a href="homeLogin.html">
 	                    <input type="button" value="Sign In" style="margin: 20px">
 	                </a>
 
-	            </form>
+	            </form>	
 	        </div>
 	    </div>
 
@@ -200,7 +213,7 @@
 			</div>
 			<div class="w3-containter">
 				<h5>Unggah foto profil</h5>
-				<div class="upload-drop-zone" id="drop-zone" style="display: block;">
+				<div class="upload-drop-zone w3-border" id="drop-zone";>
 					Drag and drop your photo
 				</div>
 			</div>
@@ -302,8 +315,6 @@
 			<button class="w3-button w3-flat-belize-hole" onclick="showCont('Kegiatan')" style="width:100%; text-align: left;">Jadwal Kegiatan</button>
 			<div class="w3-hide" id="Kegiatan">...</div>
 		</div>
-    </body>
+	</body>
+	<script type="text/javascript" src="script.js"></script>
 </html>
-<script type="text/javascript">
-	autocomplete(document.getElementById("myInput"),films);
-</script>
