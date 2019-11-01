@@ -3,11 +3,13 @@
 
 <head>
     <title>Download Film Terbaru dan Berkualitas di DownloadFilmBaru</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">    
-    <script type="text/javascript" src="script.js"></script>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <style>
     #myInput {
@@ -15,6 +17,7 @@
         background-color: #f1f1f1;
         padding: 10px;
         font-size: 16px;
+        height: 36px;
     }
 
     body {
@@ -68,7 +71,7 @@
 
     h1 {
         padding-top: 35px;
-    }    
+    }
 
     .sign {
         border-radius: 10px;
@@ -94,25 +97,26 @@
             </div>
         </div>
 
-        <div class="w3-display-topright welcome">
+        <div class="w3-display-topright welcome;">
             <h3 style="margin-right: 30px;">Welcome, User!</h3>
-            <button class="sign">
-                <a href="index.html">Log Out</a>
-            </button>
-        </div>
-
-        <div id="div_search" style="float: right; margin-top: 100px; margin-right: 30px;">
-            <div class="autocomplete" style="float: right;">
-                <input type="text" name="films" id="myInput" placeholder="Search..">
-            </div>
-
-            <div style="float:right">
-                <i class="fa fa-search" style="margin-right: 10px; size: 20px;">
-                </i>
-            </div>
+            <a href="index.html">
+                <button class="sign">
+                    Log Out
+                </button>
+            </a>
         </div>
     </header>
     <!--Apa perlu carousel untuk iklan?-->
+    <div id="div_search" style="float: right; padding-top: 110px; padding-right: 10px;">
+        <div class="autocomplete" style="float: right;">
+            <input type="text" name="films" id="myInput" placeholder="Search..">
+        </div>
+
+        <div style="float:right; margin-top: 10px;">
+            <i class="fa fa-search" style="margin-right: 10px; size: 20px;">
+            </i>
+        </div>
+    </div>
     <!--Tabbed navigation bar-->
     <div class="w3-bar w3-flat-belize-hole">
         <button class="w3-button w3-bar-item tablink" onclick="openContent(this,'home')">Home</button>
@@ -215,7 +219,7 @@
         </table>
         <!--Nantinya di sini ada pagination-->
     </div>
-    <div id="genre" class="w3-container tabs">
+    <div id="genre" class="w3-container tabs" style="display: none;">
         <div class="w3-border-bottom">
             <h3>Genre</h3>
         </div>
@@ -329,7 +333,7 @@
         </div>
         <div id="filmSci-Fi" class="w3-hide"></div>
     </div>
-    <div id="popular" class="w3-container tabs">
+    <div id="popular" class="w3-container tabs" style="display: none;">
         <div class="w3-border-bottom">
             <h3>Top 10 Popular</h3>
         </div>
@@ -393,7 +397,7 @@
         </table>
         <!--Nantinya di sini ada pagination-->
     </div>
-    <div id="recommended" class="w3-container tabs">
+    <div id="recommended" class="w3-container tabs" style="display: none;">
         <div class="w3-border-bottom">
             <h3>Recommended for this week!</h3>
         </div>
