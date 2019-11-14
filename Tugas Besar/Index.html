@@ -1,220 +1,262 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<title>Tugas Besar IMK</title>
 
-		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-        <link rel="stylesheet" href="css/header.css">
+<head>
+	<title>Tugas Besar IMK</title>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"
+		id="bootstrap-css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+		integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+	<link rel="stylesheet" href="style.css">
 
-		<script type="text/javascript">
-            var i, x, tablinks;
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-            x = document.getElementsByClassName("tabs");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
+	<script type="text/javascript">
+		var i, x, tablinks;
 
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" w3-flat-peter-river", "");
-            }
+		x = document.getElementsByClassName("tabs");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
 
-            document.getElementById(idContentContainer).style.display = "block";
-            obj.className += " w3-flat-peter-river";
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" w3-flat-peter-river", "");
+		}
+
+		document.getElementById(idContentContainer).style.display = "block";
+		obj.className += " w3-flat-peter-river";
 
 
-            function showCont(id) {
-                var x = document.getElementById(id);
+		function showCont(id) {
+			var x = document.getElementById(id);
 
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                }
-                else {
-                    x.className = x.className.replace(" w3-show", "");
-                }
-            }
-        </script>
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			}
+			else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+	</script>
 
-        <script>
-        //login
-        $(document).ready(function () {
-            $(document.getElementById('btn_login')).click(function () {
-                $(document.getElementById('login1')).animate({
-                    top: '400px'
-                });
-            });
-        });
+	<script>
+		//login
+		$(document).ready(function () {
+			$(document.getElementById('btn_login')).click(function () {
+				$(document.getElementById('login1')).animate({
+					top: '400px'
+				});
+			});
+		});
 
-        $(document).ready(function () {
-            $(document.getElementById('login_close')).click(function () {
-                $(document.getElementById('login1')).animate({
-                    top: '-400px'
-                });
-            });
-        });
+		$(document).ready(function () {
+			$(document.getElementById('login_close')).click(function () {
+				$(document.getElementById('login1')).animate({
+					top: '-400px'
+				});
+			});
+		});
 
-        //sign up
-        $(document).ready(function () {
-            $(document.getElementById('btn_signup')).click(function () {
-                $(document.getElementById('signup1')).animate({
-                    top: '500px'
-                });
-            });
-        });
+		//sign up
+		$(document).ready(function () {
+			$(document.getElementById('btn_signup')).click(function () {
+				$(document.getElementById('signup1')).animate({
+					top: '500px'
+				});
+			});
+		});
 
-        $(document).ready(function () {
-            $(document.getElementById('close_signup')).click(function () {
-                $(document.getElementById('signup1')).animate({
-                    top: '-500px'
-                });
-            });
-        });
+		$(document).ready(function () {
+			$(document.getElementById('close_signup')).click(function () {
+				$(document.getElementById('signup1')).animate({
+					top: '-500px'
+				});
+			});
+		});
 
-    </script>
-    </head>
-    <body>
-        <header>
-        	<div>
-        		<div style="width: 20%; float: left; margin-right: 100px">
-        			<img src="images/logoDFB.jpeg" id="logo">	
-        		</div>
-        		<div style="float: left;">
-        			<h1>
-        				Selamat Datang di Download Film Baru
-        			</h1>
-        		</div>
-        	</div>
-        	
-        	<!-- home,  -->
+	</script>
+</head>
 
-        	<div class="w3-display-topright" id="div_sign">
-        		<input type="button" id="btn_login" value="Log In" style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;" onclick="document.getElementById('login').style.display='block'">
-        	<input type="button" id="btn_signup" value="Sign Up" style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;" onclick="document.getElementById('signup').style.display='block'">
-        	</div>
-
-        	<div class="w3-bar w3-flat-belize-hole">
-                <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="openContent(this,'profile')">Home</button>	
-           		<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'akademik')">Genre</button>	
-            	<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'agenda')">New Release</button>	
-            </div>
-
-        </header>
-
-        <div id="signup" class="w3-modal">
-        	<div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center;  margin-top: -500px" id="signup1">
-            	<span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright" id="close_signup">
- 	               &times;
-            	</span>
-            	<b>Sign Up</b>
-            	<br>
-            	<br>
-            	<form>
-                	<table align="center">
-                    	<tr>
-                        	<th>
-                            	Username
-                        	</th>
-                        	<td>
-                        	    :
-                        	</td>
-                        	<td>
-                        	    <input type="text">
-                        	</td>
-                    	</tr>
-	                    <tr>
-	                        <th>
-	                            E-mail
-	                        </th>
-	                        <td>
-	                            :
-	                        </td>
-	                        <td>
-	                            <input type="email">
-	                        </td>
-	                    </tr>
-	                    <tr>
-	                        <th>
-	                            Password
-	                        </th>
-	                        <td>
-	                            :
-	                        </td>
-	                        <td>
-	                            <input type="password">
-	                        </td>
-	                    </tr>
-	                </table>
-	                <br>
-	                <input type="checkbox"> I already agree to the <a href="#" style="color: blue">Terms and Conditions</a>
-	                <br>
-	                <br>
-	                <input type="submit" value="Sign Up" style="margin: 20px">
-
-	            </form>
-	        </div>
-    	</div>
-
-	    <div class="w3-modal" id="login">
-	        <!--  margin-top: -400px -->
-	        <div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center; margin-top: -400px" id="login1">
-	            <span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-display-topright" id="login_close">
-	                &times;
-	            </span>
-	            <b>Sign In</b>
-	            <br>
-	            <br>
-	            <form>
-	                <table align="center">
-	                    <tr>
-	                        <th>
-	                            Username / E-mail
-	                        </th>
-	                        <td>
-	                            :
-	                        </td>
-	                        <td>
-	                            <input type="text">
-	                        </td>
-	                    </tr>
-	                    <tr>
-	                        <th>
-	                            Password
-	                        </th>
-	                        <td>
-	                            :
-	                        </td>
-	                        <td>
-	                            <input type="password">
-	                        </td>
-	                    </tr>
-	                </table>
-	                <br>
-	                <a href="homeLogin.html">
-	                    <input type="button" value="Sign In" style="margin: 20px">
-	                </a>
-
-	            </form>	
-	        </div>
-	    </div>
-
-        <div class="tabs w3-padding" id="profile">
-			Konten untuk Home
+<body>
+	<header>
+		<div>
+			<div style="width: 20%; float: left; margin-right: 100px">
+				<img src="images/logoDFB.jpeg" id="logo">
+			</div>
+			<div style="float: left;">
+				<h1>
+					Selamat Datang di Download Film Baru
+				</h1>
+			</div>
 		</div>
 
-		<div class="tabs w3-padding" id="akademik" style="display: none">
-			<p>Konten 2</p>
+		<!-- home,  -->
+
+		<div class="w3-display-topright" id="div_sign">
+			<input type="button" id="btn_login" value="Log In"
+				style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;"
+				onclick="document.getElementById('login').style.display='block'">
+			<input type="button" id="btn_signup" value="Sign Up"
+				style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;"
+				onclick="document.getElementById('signup').style.display='block'">
 		</div>
 
-		<div class="tabs w3-padding" id="agenda" style="display: none; width: 100%">
-			Konten 3
+		<div class="w3-bar w3-flat-belize-hole">
+			<button class="w3-button w3-bar-item w3-flat-peter-river tablink"
+				onclick="openContent(this,'profile')">Home</button>
+			<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'akademik')">Genre</button>
+			<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'agenda')">New Release</button>
 		</div>
-	</body>
-	<script type="text/javascript" src="script.js"></script>
+
+	</header>
+
+	<div id="signup" class="w3-modal">
+		<div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center;  margin-top: -500px"
+			id="signup1">
+			<span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright"
+				id="close_signup">
+				&times;
+			</span>
+			<b>Sign Up</b>
+			<br>
+			<br>
+			<form>
+				<table align="center">
+					<tr>
+						<th>
+							Username
+						</th>
+						<td>
+							:
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<th>
+							E-mail
+						</th>
+						<td>
+							:
+						</td>
+						<td>
+							<input type="email">
+						</td>
+					</tr>
+					<tr>
+						<th>
+							Password
+						</th>
+						<td>
+							:
+						</td>
+						<td>
+							<input type="password">
+						</td>
+					</tr>
+				</table>
+				<br>
+				<input type="checkbox"> I already agree to the <a href="#" style="color: blue">Terms and Conditions</a>
+				<br>
+				<table align="center">
+					<tr>
+						<td>
+							<input type="text" style="width: 50%;">
+						</td>
+						<td>
+							<span>
+								Captcha
+							</span>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<span onclick="document.getElementById('signup').style.display='none'" class="w3-display-middlebottom"
+					id="close_signup">
+					<input type="submit" value="Sign Up">
+				</span>
+			</form>
+			<br>
+		</div>
+	</div>
+
+	<div class="w3-modal" id="login">
+		<!--  margin-top: -400px -->
+		<div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center; margin-top: -400px"
+			id="login1">
+			<span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-display-topright"
+				id="login_close">
+				&times;
+			</span>
+			<b>Sign In</b>
+			<br>
+			<br>
+			<form>
+				<table align="center">
+					<tr>
+						<th>
+							Username / E-mail
+						</th>
+						<td>
+							:
+						</td>
+						<td>
+							<input type="text" id="in_user">
+						</td>
+					</tr>
+					<tr>
+						<th>
+							Password
+						</th>
+						<td>
+							:
+						</td>
+						<td>
+							<input type="password" id="in_pass">
+						</td>
+					</tr>
+				</table>
+				<br>
+				<a href="homeLogin.html">
+					<input type="button" value="Sign In" style="margin: 20px">
+					
+				</a>
+
+			</form>
+		</div>
+	</div>
+
+	<div class="tabs w3-padding" id="profile">
+		Konten untuk Home
+	</div>
+
+	<div class="tabs w3-padding" id="akademik" style="display: none">
+		<p>Konten 2</p>
+	</div>
+
+	<div class="tabs w3-padding" id="agenda" style="display: none; width: 100%">
+		Konten 3
+	</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+
 </html>
+
+<script>
+	function check(user, pass) {
+		if (user == null) {
+			document.getElementById('in_user').innerHTML("invalid");
+			document.getElementById('in_user').style.color("Red");
+		}
+		if (pass == null) {
+			docuemnt.getElementById('in_pass').innerHTML("invalid");
+		}
+	}
+</script>
