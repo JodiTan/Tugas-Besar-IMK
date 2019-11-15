@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Tugas Besar IMK</title>
+	<title>Download Film Baru</title>
 
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"
 		id="bootstrap-css">
@@ -109,9 +109,9 @@
 
 		<div class="w3-bar w3-flat-belize-hole">
 			<button class="w3-button w3-bar-item w3-flat-peter-river tablink"
-				onclick="openContent(this,'profile')">Home</button>
-			<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'akademik')">Genre</button>
-			<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'agenda')">New Release</button>
+				onclick="openContent(this,'home')">Home</button>
+			<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'genre')">Genre</button>
+			<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'new')">New Release</button>
 		</div>
 
 	</header>
@@ -127,7 +127,7 @@
 			<br>
 			<br>
 			<form>
-				<table align="center">
+				<table style="margin: auto;">
 					<tr>
 						<th>
 							Username
@@ -165,7 +165,7 @@
 				<br>
 				<input type="checkbox"> I already agree to the <a href="#" style="color: blue">Terms and Conditions</a>
 				<br>
-				<table align="center">
+				<table style="margin: auto;">
 					<tr>
 						<td>
 							<input type="text" style="width: 50%;">
@@ -199,7 +199,7 @@
 			<br>
 			<br>
 			<form>
-				<table align="center">
+				<table style="margin: auto;"">
 					<tr>
 						<th>
 							Username / E-mail
@@ -233,16 +233,16 @@
 		</div>
 	</div>
 
-	<div class="tabs w3-padding" id="profile">
-		Konten untuk Home
+	<div class="tabs w3-padding w3-border-bottom" id="home">
+		<h3>Konten Home</h3>		
 	</div>
 
-	<div class="tabs w3-padding" id="akademik" style="display: none">
-		<p>Konten 2</p>
+	<div class="tabs w3-padding w3-border-bottom" id="genre" style="display: none">
+		<h3>Konten Genre</h3>
 	</div>
 
-	<div class="tabs w3-padding" id="agenda" style="display: none; width: 100%">
-		Konten 3
+	<div class="tabs w3-padding w3-border-bottom" id="new" style="display: none; width: 100%">
+		<h3>Konten New Release</h3>
 	</div>
 </body>
 <script type="text/javascript" src="script.js"></script>
