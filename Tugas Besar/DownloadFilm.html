@@ -2,6 +2,8 @@
 <html>
 
 <head>
+
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -20,11 +22,129 @@
         li {
             float: left;
         }
+
+        #myProgress {
+            width: 100%;
+            background-color: #DDD;
+        }
+
+        #progress {
+            width: 1%;
+            height: 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
     </style>
+
+    <script type="text/javascript">
+        function download4K() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 30);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function downloadBR() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 20);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download1K() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download780() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 8);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download480() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 5);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function show() {
+            document.getElementById("myProgress").style.display = "block";
+        }
+
+        function hide() {
+            document.getElementById("myProgress").style.display = "none";
+        }
+    </script>
 </head>
 
 <body>
     <header>
+        <div id="myProgress" style="display: none;">
+            <div id="progress">
+                1%
+            </div>
+        </div>
         <div>
             <div style="width: 20%; float: left; margin-right: 100px">
                 <img src="images/logoDFB.jpeg" id="logo">
@@ -89,36 +209,36 @@
                 <td style="font-size: 20px;">
                     <ul>
                         <li>
-                            <a download="ABeautifulMind" href="">
-                                <button>
+                            <a href="Video/ABeautifulMind.mp4" download="ABeautifulMind_4K">
+                                <button onclick="download4K()">
                                     4K
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="ABeautifulMind" href="">
-                                <button>
+                            <a download="ABeautifulMind_BlueRay" href="Video/ABeautifulMind.mp4">
+                                <button onclick="downloadBR()">
                                     BlueRay
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="ABeautifulMind" href="">
-                                <button>
+                            <a download="ABeautifulMind_1080" href="Video/ABeautifulMind.mp4">
+                                <button onclick="download1K()">
                                     1080p
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="ABeautifulMind" href="">
-                                <button>
+                            <a download="ABeautifulMind_780" href="Video/ABeautifulMind.mp4">
+                                <button onclick="download780()">
                                     780p
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="ABeautifulMind" href="">
-                                <button>
+                            <a download="ABeautifulMind_480" href="Video/ABeautifulMind.mp4">
+                                <button onclick="download1K()">
                                     480p
                                 </button>
                             </a>
@@ -165,7 +285,6 @@
             </tr>
         </table>
     </div>
-
 </body>
 
 </html>
