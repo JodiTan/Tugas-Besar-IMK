@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f8f8f8;
+        }
+
+        li {
+            float: left;
+        }
+
+        #myProgress {
+            width: 100%;
+            background-color: #DDD;
+        }
+
+        #progress {
+            width: 1%;
+            height: 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function download4K() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 30);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function downloadBR() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 20);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download1K() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download780() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 8);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download480() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 5);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function show() {
+            document.getElementById("myProgress").style.display = "block";
+        }
+
+        function hide() {
+            document.getElementById("myProgress").style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="myProgress" style="display: none;">
+            <div id="progress">
+                1%
+            </div>
+        </div>
+        <div>
+            <div style="width: 20%; float: left; margin-right: 100px">
+                <img src="../images/logoDFB.jpeg" id="logo">
+            </div>
+            <div style="float: left;">
+                <h1>
+                    Selamat Datang di Download Film Baru
+                </h1>
+            </div>
+        </div>
+
+        <div class="w3-display-topright ;">
+            <h3 style="margin-right: 30px;">Welcome, User!</h3>
+            <a href="../index.html">
+                <button class="sign">
+                    Log Out
+                </button>
+            </a>
+        </div>
+    </header>
+    <div id="div_search" style="float: right; padding-top: 110px; padding-right: 10px;">
+        <div class="autocomplete" style="float: right;">
+            <input type="text" name="films" id="myInput" placeholder="Search..">
+        </div>
+
+        <div style="float:right; margin-top: 10px;">
+            <i class="fa fa-search" style="margin-right: 10px; size: 20px;">
+            </i>
+        </div>
+    </div>
+
+    <div style="margin-left: 150px; padding-top: 200px; width: 80%; align-content: center;">
+        <table>
+            <tr>
+                <td rowspan="3" style="content: none;">
+                    <img src="../images/JohnWick.png" style="width: 300px; height: 350px;">
+                </td>
+                <td style="margin-left: -50px;">
+                    <h1>
+                        John Wick 3
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>
+                        Genre
+                    </h2>
+                </td>
+                <td>
+                    <h2>
+                        Action | Crime | Thriller
+                    </h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>
+                        Download
+                    </h2>
+                </td>
+                <td style="font-size: 20px;">
+                    <ul>
+                        <li>
+                            <a href="../Video/John Wick 3.mp4" download="JohnWick3_4K">
+                                <button onclick="download4K()">
+                                    4K
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a download="JohnWick3_BlueRay" href="../Video/John Wick 3.mp4">
+                                <button onclick="downloadBR()">
+                                    BlueRay
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a download="JohnWick3_1080" href="../Video/John Wick 3.mp4">
+                                <button onclick="download1K()">
+                                    1080p
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a download="JohnWick3_780" href="../Video/John Wick 3.mp4">
+                                <button onclick="download780()">
+                                    780p
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a download="JohnWick3_480" href="../Video/John Wick 3.mp4">
+                                <button onclick="download1K()">
+                                    480p
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <h2>
+                        Deskripsi :
+                    </h2>
+                    <p style="font-size: 20px;">
+
+                        395/5000
+                        Dalam angsuran ketiga dari franchise aksi berbahan bakar adrenalin ini, pembunuh bayaran John
+                        Wick (Keanu Reeves) kembali dengan label harga $ 14 juta di kepalanya dan sepasukan pembunuh
+                        pemburu hadiah di jalurnya. Setelah membunuh seorang anggota dari guild pembunuh internasional
+                        bayangan, High Table, John Wick adalah ekskomunikasi, tetapi pria dan wanita hit paling kejam di
+                        dunia menunggu setiap belokannya.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
