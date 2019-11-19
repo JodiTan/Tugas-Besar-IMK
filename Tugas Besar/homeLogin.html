@@ -3,13 +3,15 @@
 
 <head>
     <title>Download Film Terbaru dan Berkualitas di DownloadFilm Baru</title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
     #myInput {
@@ -90,9 +92,8 @@
 
     .img:hover {
         transform: scale(1.15);
-    }
+    }        
 </style>
-
 <body>
     <header>
         <div>
@@ -136,8 +137,40 @@
 
     <!--Containers untuk tabbed layout-->
     <div id="home" class="w3-container tabs">
+        <div class="carousel-container">
+            <div class="images slides">
+                <div class="numbertext">
+                    <span class="w3-color-white w3-large w3-flat-silver w3-padding">Land of Mine</span>
+                </div>
+                <img src="images/LandOfMine.jpg" style="width: 100%" alt="">
+            </div>
+            <div class="images slides">
+                <div class="numbertext">
+                    <span class="w3-color-white w3-large w3-flat-silver w3-padding">A Beautiful Mind</span>
+                </div>
+                <img src="images/ABeautifulMind.png" style="width: 100%" alt="">
+            </div>
+            <div class="images slides">
+                <div class="numbertext">
+                    <span class="w3-color-white w3-large w3-flat-silver w3-padding">Avatar</span>
+                </div>
+                <img src="images/Avatar.png" style="width: 100%" alt="">
+            </div>
+            <div class="images slides">
+                <div class="numbertext">
+                    <span class="w3-color-white w3-large w3-flat-silver w3-padding">John Wick: Parabellum</span>
+                </div>
+                <img src="images/JohnWick.png" style="width: 100%" alt="">
+            </div>
+            <div class="images slides">
+                <div class="numbertext">
+                    <span class="w3-color-white w3-large w3-flat-silver w3-padding">Avengers: Endgame</span>
+                </div>
+                <img src="images/AvengersEndgame.png" style="width: 100%" alt="">
+            </div>
+        </div>
         <div class="w3-border-bottom">
-            <h3>Home</h3>
+            <h3>Featured Movies</h3>
         </div>
         <br>
         <table>
@@ -418,40 +451,7 @@
         </table>
         <!--Nantinya di sini ada pagination-->
     </div>
-    <div id="recommended" class="w3-container tabs" style="display: none;">
-        <div class="w3-border-bottom">
-            <h3>Recommended for this week!</h3>
-        </div>
-        <br>
-        <table>
-            <tr>
-                <td><img src="images/Barbie.png" alt="Barbie" style="width: 300px; height: 300px; padding: 10px;"></td>
-                <td><img src="images/ABeautifulMind.png" alt="A Beautiful Mind"
-                        style="width: 300px; height: 300px; padding: 10px;"></td>
-                <td><img src="images/Avatar.png" alt="Avatar" style="width: 300px; height: 300px; padding: 10px;"></td>
-                <td><img src="images/JohnWick.png" alt="John Wick: Parabellum"
-                        style="width: 300px; height: 300px; padding: 10px;"></td>
-                <td><img src="images/CaptainAmerica1.png" alt="Captain America: The First Avenger"
-                        style="width: 300px; height: 300px; padding: 10px;"></td>
-            </tr>
-            <tr>
-                <th style="text-align: center;">
-                    <h6><b>Barbie</b></h6>
-                </th>
-                <th style="text-align: center;">
-                    <h6><b>A Beautiful Mind</b></h6>
-                </th>
-                <th style="text-align: center;">
-                    <h6><b>Avatar</b></h6>
-                </th>
-                <th style="text-align: center;">
-                    <h6><b>John Wick: Parabellum</b></h6>
-                </th>
-                <th style="text-align: center;">
-                    <h6><b>Captain America: The First Avenger</b></h6>
-                </th>
-            </tr>
-        </table>
+    </table>
 </body>
 <script type="text/javascript">
     var films = ["2012", "A Beautiful Mind", "A Star is Born", "Annabelle", "Armageddon", "Avatar (2009)", "Avengers: End Game", "Avengers: Infinity War", "Barbie",

@@ -11,7 +11,7 @@
 		integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css" type="text/css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -81,13 +81,29 @@
 		});
 
 	</script>
+	<style>
+		body {
+			font: 16px;
+		}
+
+		.img {
+			transition: transform .2s;
+			margin: 0 auto;
+		}
+
+		.img:hover {
+			transform: scale(1.15);
+		}
+	</style>
 </head>
 
 <body>
 	<header>
 		<div>
 			<div style="width: 20%; float: left; margin-right: 100px">
-				<img src="images/logoDFB.jpeg" id="logo">
+				<a href="index.html">
+					<img src="images/logoDFB.jpeg" id="logo">
+				</a>
 			</div>
 			<div style="float: left;">
 				<h1>
@@ -108,10 +124,8 @@
 		</div>
 
 		<div class="w3-bar w3-flat-belize-hole">
-			<button class="w3-button w3-bar-item w3-flat-peter-river tablink"
-				onclick="openContent(this,'home')">Home</button>
-			<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'genre')">Genre</button>
-			<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'new')">New Release</button>
+			<button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="openContent(this,'new')">New
+				Release</button>
 		</div>
 
 	</header>
@@ -208,8 +222,8 @@
 							:
 						</td>
 						<td>
-							<input type="text" id="in_user">
-						</td>
+							<input type=" text" id="in_user">
+					</td>
 					</tr>
 					<tr>
 						<th>
@@ -226,24 +240,122 @@
 				<br>
 				<a href="homeLogin.html">
 					<input type="button" value="Sign In" style="margin: 20px">
-					
+
 				</a>
 
 			</form>
 		</div>
 	</div>
 
-	<div class="tabs w3-padding w3-border-bottom" id="home">
-		<h3>Konten Home</h3>		
-	</div>
-
-	<div class="tabs w3-padding w3-border-bottom" id="genre" style="display: none">
-		<h3>Konten Genre</h3>
-	</div>
-
 	<div class="tabs w3-padding w3-border-bottom" id="new" style="display: none; width: 100%">
-		<h3>Konten New Release</h3>
+		<h3>New Release</h3>
 	</div>
+	<div>
+		<div class="w3-border-bottom w3-container tabs">
+			<h3>New Release</h3>
+		</div>
+		<br>
+		<table>
+			<tr>
+				<td>
+					<a href="Film/JohnWickNoLogin.html">
+						<img src="images/JohnWick.png" alt="John Wick: Parabellum"
+							style="width: 300px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</td>
+				<td><img src="images/TheImitationGame.png" alt="The Imitation Game"
+						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
+				<td><img src="images/2012.png" alt="2012" style="width: 300px; height: 300px; padding: 10px;"
+						class="img">
+				</td>
+				<td><img src="images/AStarIsBorn.png" alt="A Star is Born"
+						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
+				<td><img src="images/ManInBlack.png" alt="Man In Black International"
+						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
+			</tr>
+			<tr>
+				<th style="text-align: center;">
+					<h4><b>John Wick: Parabellum</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>The Imitation Game</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>2012</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>A Star is Born</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>Man In Black International</b></h4>
+				</th>
+			</tr>
+			<tr>
+				<td><img src="images/CaptainAmerica1.png" alt="Captain America: The First Avenger"
+						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
+				<td><img src="images/Avatar.png" alt="Avatar" style="width: 300px; height: 300px; padding: 10px;"
+						class="img"></td>
+				<td><img src="images/AvengersEndgame.png" alt="Avengers: Endgame"
+						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
+				<td><img src="images/Armageddon.png" alt="Armageddon"
+						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
+				<td><img src="images/Barbie.png" alt="Barbie" style="width: 300px; height: 300px; padding: 10px;"
+						class="img"></td>
+			</tr>
+			<tr>
+				<th style="text-align: center;">
+					<h4><b>Captain America: The First Avenger</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>Avatar</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>Avengers: Endgame</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>Armageddon</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>Barbie</b></h4>
+				</th>
+			</tr>
+			<tr>
+				<td class="img"><img src="images/Annabelle.png" alt="Annabelle"
+						style="width: 300px; height: 300px; padding: 10px;">
+				</td>
+				<td class="img"><img src="images/AvengersInfinityWar.png" alt="Avengers: Infinity War"
+						style="width: 300px; height: 300px; padding: 10px;"></td>
+				<td class="img">
+					<a href="Film/ABeautifulMind.html">
+						<img src="images/ABeautifulMind.png" alt="A Beautiful Mind"
+							style="width: 300px; height: 300px; padding: 10px;">
+					</a>
+				</td>
+				<td class="img"><img src="images/TheTheoryOfEverything.png" alt="The Theory of Everything"
+						style="width: 300px; height: 300px; padding: 10px;"></td>
+				<td class="img"><img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
+						style="width: 300px; height: 300px; padding: 10px;"></td>
+			</tr>
+			<tr>
+				<th style="text-align: center;">
+					<h4><b>Annabelle</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>Avengers: Infinity War</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>A Beautiful Mind</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>The Theory of Everything</b></h4>
+				</th>
+				<th style="text-align: center;">
+					<h4><b>Batman: The Dark Knight</b></h4>
+				</th>
+			</tr>
+		</table>
+	</div>
+
 </body>
 <script type="text/javascript" src="script.js"></script>
 

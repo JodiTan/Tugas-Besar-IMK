@@ -71,3 +71,41 @@ h1{
 #div_sign{
     padding: 20px;
 }
+
+h1, h2, h3, h4, h5, h6, span{
+	font-family: "Lucida Sans Unicode"!important;
+}
+
+.images{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.carousel-container{
+	position: relative;
+	margin: auto;
+	border-bottom: solid skyblue;
+	height: 300px;
+	overflow: hidden;
+}
+
+.numbertext{
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* sliding animation */
+@keyframes slides{
+	0%{left: 100%}
+	40%{left: 0}
+	60%{left: 0}
+	100%{left: -100%}
+}
+
+.slides{
+	animation-name: slides;
+	animation-duration: 8s;
+}
