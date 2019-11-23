@@ -4,46 +4,44 @@
 <head>
 	<title>Download Film Baru</title>
 
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"
-		id="bootstrap-css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-		integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<!-- <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"
+		id="bootstrap-css"> -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+		integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous"> -->
+
+	<!-- class w3 -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!------------------------------------------------------------------------------------------------->
+
+	<!-- icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!------------------------------------------------------------------------------------------------->
+
+	<!-- color di header -->
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+	<!------------------------------------------------------------------------------------------------->
+
+	<!-- styling -->
 	<link rel="stylesheet" href="style.css" type="text/css">
+	<!------------------------------------------------------------------------------------------------->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
 
-	<script type="text/javascript">
-		var i, x, tablinks;
+	<!-- carousel -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<!------------------------------------------------------------------------------------------------->
 
-		x = document.getElementsByClassName("tabs");
-		for (i = 0; i < x.length; i++) {
-			x[i].style.display = "none";
-		}
+	<!-- multiple carousel -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<!------------------------------------------------------------------------------------------------->
 
-		tablinks = document.getElementsByClassName("tablink");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" w3-flat-peter-river", "");
-		}
-
-		document.getElementById(idContentContainer).style.display = "block";
-		obj.className += " w3-flat-peter-river";
-
-
-		function showCont(id) {
-			var x = document.getElementById(id);
-
-			if (x.className.indexOf("w3-show") == -1) {
-				x.className += " w3-show";
-			}
-			else {
-				x.className = x.className.replace(" w3-show", "");
-			}
-		}
-	</script>
 
 	<script>
 		//login
@@ -80,6 +78,19 @@
 			});
 		});
 
+
+		//changePage to homeLogin
+		// function login() {
+		// 	var fromData = $(document.getElementById('login')).serialize(); // your form's data
+		// 	$.ajax({
+		// 		type: "POST",
+		// 		data: fromData //sends the data to the new page.
+		// 	})
+		// 		.done(function (msg) {
+		// 			window.location.href = 'homeLogin.php' // redirects the page when finished.
+		// 		});
+		// }
+
 	</script>
 	<style>
 		body {
@@ -93,6 +104,164 @@
 
 		.img:hover {
 			transform: scale(1.15);
+		}
+
+		.col-centered {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.carousel-control {
+			width: 8%;
+			width: 0px;
+		}
+
+		.carousel-control.left,
+		.carousel-control.right {
+			margin-right: 40px;
+			margin-left: 32px;
+			background-image: none;
+			opacity: 1;
+		}
+
+		.carousel-control>a>span {
+			color: white;
+			font-size: 29px !important;
+		}
+
+		.carousel-col {
+			position: relative;
+			min-height: 1px;
+			padding: 5px;
+			float: left;
+		}
+
+		.active>div {
+			display: none;
+		}
+
+		.active>div:first-child {
+			display: block;
+		}
+
+		/*xs*/
+		@media (max-width: 767px) {
+			.carousel-inner {
+				left: -50%;
+			}
+
+			.carousel-inner .active.right {
+				left: 50%;
+			}
+
+			.carousel-inner .next {
+				left: 50%;
+			}
+
+			.carousel-inner .prev {
+				left: -50%;
+			}
+
+			.carousel-col {
+				width: 50%;
+			}
+
+			.active>div:first-child+div {
+				display: block;
+			}
+		}
+
+		/*sm*/
+		@media (min-width: 768px) and (max-width: 991px) {
+			.carousel-inner .active.left {
+				left: -50%;
+			}
+
+			.carousel-inner .active.right {
+				left: 50%;
+			}
+
+			.carousel-inner .next {
+				left: 50%;
+			}
+
+			.carousel-inner .prev {
+				left: -50%;
+			}
+
+			.carousel-col {
+				width: 50%;
+			}
+
+			.active>div:first-child+div {
+				display: block;
+			}
+		}
+
+		/*md*/
+		@media (min-width: 992px) and (max-width: 1199px) {
+			.carousel-inner .active.left {
+				left: -33%;
+			}
+
+			.carousel-inner .active.right {
+				left: 33%;
+			}
+
+			.carousel-inner .next {
+				left: 33%;
+			}
+
+			.carousel-inner .prev {
+				left: -33%;
+			}
+
+			.carousel-col {
+				width: 33%;
+			}
+
+			.active>div:first-child+div {
+				display: block;
+			}
+
+			.active>div:first-child+div+div {
+				display: block;
+			}
+		}
+
+		/*lg*/
+		@media (min-width: 1200px) {
+			.carousel-inner .active.left {
+				left: -25%;
+			}
+
+			.carousel-inner .active.right {
+				left: 25%;
+			}
+
+			.carousel-inner .next {
+				left: 25%;
+			}
+
+			.carousel-inner .prev {
+				left: -25%;
+			}
+
+			.carousel-col {
+				width: 25%;
+			}
+
+			.active>div:first-child+div {
+				display: block;
+			}
+
+			.active>div:first-child+div+div {
+				display: block;
+			}
+
+			.active>div:first-child+div+div+div {
+				display: block;
+			}
 		}
 	</style>
 </head>
@@ -112,20 +281,28 @@
 			</div>
 		</div>
 
-		<!-- home,  -->
-
 		<div class="w3-display-topright" id="div_sign">
 			<input type="button" id="btn_login" value="Log In"
-				style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;"
+				style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
 				onclick="document.getElementById('login').style.display='block'">
 			<input type="button" id="btn_signup" value="Sign Up"
-				style="float: right; font-size: 25px; margin: 5px; border-radius: 10px;"
+				style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
 				onclick="document.getElementById('signup').style.display='block'">
 		</div>
 
-		<div class="w3-bar w3-flat-belize-hole">
-			<button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="openContent(this,'new')">New
-				Release</button>
+		<div class="w3-bar w3-flat-belize-hole" style="text-align: center; font-size: 24px;">
+			<a class="w3-button" href="">
+				<i class="fa fa-home"></i>
+			</a>
+			<a class="w3-button" href="pages/userGrowth.html">
+				User Growth
+			</a>
+			<a class="w3-button" href="pages/userByRegion.html">
+				Users by Region
+			</a>
+			<a class="w3-button" href="pages/fastest.html">
+				Fastest Internet
+			</a>
 		</div>
 
 	</header>
@@ -212,8 +389,8 @@
 			<b>Sign In</b>
 			<br>
 			<br>
-			<form>
-				<table style="margin: auto;"">
+			<form id="login">
+				<table style="margin: auto;">
 					<tr>
 						<th>
 							Username / E-mail
@@ -222,8 +399,8 @@
 							:
 						</td>
 						<td>
-							<input type=" text" id="in_user">
-					</td>
+							<input type=" text" id="in_user" required="">
+						</td>
 					</tr>
 					<tr>
 						<th>
@@ -233,38 +410,118 @@
 							:
 						</td>
 						<td>
-							<input type="password" id="in_pass">
+							<input type="password" id="in_pass" required="">
 						</td>
 					</tr>
 				</table>
 				<br>
-				<a href="homeLogin.html">
-					<input type="button" value="Sign In" style="margin: 20px">
-
-				</a>
-
+				<input type="submit" value="Sign In" style="margin: 20px" onsubmit="">
 			</form>
 		</div>
 	</div>
 
-	<div class="tabs w3-padding w3-border-bottom" id="new" style="display: none; width: 100%">
-		<h3>New Release</h3>
-	</div>
-	<div>
-		<div class="w3-border-bottom w3-container tabs">
-			<h3>New Release</h3>
+	<br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-11 col-md-10 col-centered">
+
+				<div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2000">
+					<div class="carousel-inner">
+						<div class="item active">
+							<div class="carousel-col">
+								<img src="images/ABeautifulMind.png" style="width: 200px; height: 200px;">
+							</div>
+						</div>
+						<div class="item">
+							<div class="carousel-col">
+								<img src="images/CaptainAmerica1.png" style="width: 200px; height: 200px;">
+							</div>
+						</div>
+						<div class="item">
+							<div class="carousel-col">
+								<img src="images/BatmanTheDarkKnight.png" style="width: 200px; height: 200px;">
+							</div>
+						</div>
+						<div class="item">
+							<div class="carousel-col">
+								<img src="images/Annabelle.png" style="width: 200px; height: 200px;">
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="carousel-col">
+								<img src="images/logoDFB.JPEG" style="width: 200px; height: 200px;">
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="carousel-col">
+								<img src="images/JohnWick.png" style="width: 200px; height: 200px;">
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="carousel-col">
+								<img src="images/LandOfMine.jpg" style="width: 200px; height: 200px;">
+							</div>
+						</div>
+					</div>
+
+					<!-- Controls -->
+					<div class="left carousel-control">
+						<a href="#carousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+					</div>
+					<div class="right carousel-control">
+						<a href="#carousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
+
+	<script>
+		$('.carousel[data-type="multi"] .item').each(function () {
+			var next = $(this).next();
+			if (!next.length) {
+				next = $(this).siblings(':first');
+			}
+			next.children(':first-child').clone().appendTo($(this));
+
+			for (var i = 0; i < 2; i++) {
+				next = next.next();
+				if (!next.length) {
+					next = $(this).siblings(':first');
+				}
+
+				next.children(':first-child').clone().appendTo($(this));
+			}
+		});
+	</script>
+
+	<div>
 		<br>
 		<table>
 			<tr>
 				<td>
-					<a href="Film/JohnWickNoLogin.html">
+					<a href="FilmNoLogin/JohnWick.html">
 						<img src="images/JohnWick.png" alt="John Wick: Parabellum"
 							style="width: 300px; height: 300px; padding: 10px;" class="img">
 					</a>
 				</td>
-				<td><img src="images/TheImitationGame.png" alt="The Imitation Game"
-						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
+				<td>
+					<a href="FilmNoLogin/ImitationGame.html">
+						<img src="images/TheImitationGame.png" alt="The Imitation Game"
+							style="width: 300px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</td>
+
 				<td><img src="images/2012.png" alt="2012" style="width: 300px; height: 300px; padding: 10px;"
 						class="img">
 				</td>
