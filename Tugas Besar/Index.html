@@ -35,7 +35,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<!------------------------------------------------------------------------------------------------->
 
-
 	<script>
 		//login
 		$(document).ready(function () {
@@ -71,19 +70,7 @@
 			});
 		});
 
-
-		//changePage to homeLogin
-		// function login() {
-		// 	var fromData = $(document.getElementById('login')).serialize(); // your form's data
-		// 	$.ajax({
-		// 		type: "POST",
-		// 		data: fromData //sends the data to the new page.
-		// 	})
-		// 		.done(function (msg) {
-		// 			window.location.href = 'homeLogin.php' // redirects the page when finished.
-		// 		});
-		// }
-
+		// carousel
 		$('.carousel[data-type="multi"] .item').each(function () {
 			var next = $(this).next();
 			if (!next.length) {
@@ -279,8 +266,19 @@
 		}
 	</style>
 </head>
+<div id="div_search" style="float: right; padding-top: 110px; padding-right: 10px;">
+	<div class="autocomplete" style="float: right;">
+		<input type="text" name="films" id="myInput" placeholder="Search..">
+	</div>
+
+	<div style="float:right; margin-top: 10px;">
+		<i class="fa fa-search" style="margin-right: 10px; size: 20px;">
+		</i>
+	</div>
+</div>
 
 <body>
+
 	<header>
 		<div>
 			<div style="width: 20%; float: left; margin-right: 100px">
@@ -465,7 +463,7 @@
 
 						<div class="item">
 							<div class="carousel-col">
-								<img src="images/logoDFB.JPEG" style="width: 220px; height: 250px;">
+								<img src="images/AvengersInfinityWar.png" style="width: 220px; height: 250px;">
 							</div>
 						</div>
 
@@ -519,127 +517,249 @@
 		});
 	</script>
 
-	<div>
-		<br>
-		<table>
-			<tr>
-				<td>
-					<a href="FilmNoLogin/JohnWick.html">
-						<img src="images/JohnWick.png" alt="John Wick: Parabellum"
-							style="width: 300px; height: 300px; padding: 10px;" class="img">
-					</a>
-				</td>
-				<td>
-					<a href="FilmNoLogin/ImitationGame.html">
-						<img src="images/TheImitationGame.png" alt="The Imitation Game"
-							style="width: 300px; height: 300px; padding: 10px;" class="img">
-					</a>
-				</td>
+	<br>
 
-				<td><img src="images/2012.png" alt="2012" style="width: 300px; height: 300px; padding: 10px;"
-						class="img">
-				</td>
-				<td><img src="images/AStarIsBorn.png" alt="A Star is Born"
-						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
-				<td><img src="images/ManInBlack.png" alt="Man In Black International"
-						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
-			</tr>
-			<tr>
-				<th style="text-align: center;">
-					<h4><b>John Wick: Parabellum</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>The Imitation Game</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>2012</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>A Star is Born</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>Man In Black International</b></h4>
-				</th>
-			</tr>
-			<tr>
-				<td><img src="images/CaptainAmerica1.png" alt="Captain America: The First Avenger"
-						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
-				<td><img src="images/Avatar.png" alt="Avatar" style="width: 300px; height: 300px; padding: 10px;"
-						class="img"></td>
-				<td><img src="images/AvengersEndgame.png" alt="Avengers: Endgame"
-						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
-				<td><img src="images/Armageddon.png" alt="Armageddon"
-						style="width: 300px; height: 300px; padding: 10px;" class="img"></td>
-				<td><img src="images/Barbie.png" alt="Barbie" style="width: 300px; height: 300px; padding: 10px;"
-						class="img"></td>
-			</tr>
-			<tr>
-				<th style="text-align: center;">
-					<h4><b>Captain America: The First Avenger</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>Avatar</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>Avengers: Endgame</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>Armageddon</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>Barbie</b></h4>
-				</th>
-			</tr>
-			<tr>
-				<td class="img"><img src="images/Annabelle.png" alt="Annabelle"
-						style="width: 300px; height: 300px; padding: 10px;">
-				</td>
-				<td class="img"><img src="images/AvengersInfinityWar.png" alt="Avengers: Infinity War"
-						style="width: 300px; height: 300px; padding: 10px;"></td>
-				<td class="img">
-					<a href="Film/ABeautifulMind.html">
-						<img src="images/ABeautifulMind.png" alt="A Beautiful Mind"
-							style="width: 300px; height: 300px; padding: 10px;">
-					</a>
-				</td>
-				<td class="img"><img src="images/TheTheoryOfEverything.png" alt="The Theory of Everything"
-						style="width: 300px; height: 300px; padding: 10px;"></td>
-				<td class="img"><img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-						style="width: 300px; height: 300px; padding: 10px;"></td>
-			</tr>
-			<tr>
-				<th style="text-align: center;">
-					<h4><b>Annabelle</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>Avengers: Infinity War</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>A Beautiful Mind</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>The Theory of Everything</b></h4>
-				</th>
-				<th style="text-align: center;">
-					<h4><b>Batman: The Dark Knight</b></h4>
-				</th>
-			</tr>
-		</table>
+	<div class="w3-container" style="font-size: 24px;">
+		<div class="w3-flat-belize-hole" style="text-align: center;">
+			<h2 style="text-align: center; font-size: 30px; ">
+				FEATURED MOVIES
+			</h2>
+			<div class="w3-bar w3-flat-belize-hole" style="text-align: center;">
+				<button class="w3-button w3-bar-item w3-flat-peter-river tablink"
+					onclick="openContent(this,'featured')">FEATURED</button>
+				<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'newRelease')">New
+					Release</button>
+				<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'topView')">Top Viewed</button>
+			</div>
+		</div>
+		<!-- Containers untuk tabbed layout-->
+		<div class="tabs w3-padding w3-border" id="featured">
+			<!-- isi tabbed -->
+			<table>
+				<tr>
+					<td>
+						<a href="Film/JohnWick3.html">
+							<img src="images/JohnWick.png" alt="John Wick: Parabellum"
+								style="width: 257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/ImitationGame.html">
+							<img src="images/TheImitationGame.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/2012.html">
+							<img src="images/2012.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/AStarIsBorn.html">
+							<img src="images/AStarIsBorn.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/ManInBlack.html">
+							<img src="images/ManInBlack.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<th style="text-align: center;">
+						<h4><b>John Wick: Parabellum</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>The Imitation Game</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>2012</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>A Star is Born</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Main In Black</b></h4>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<a href="Film/Avatar.html">
+							<img src="images/Avatar.png" alt="John Wick: Parabellum"
+								style="width: 257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+					<td>
+						<a href="Film/Armageddon.html">
+							<img src="images/Armageddon.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/CaptainAmerica1.html">
+							<img src="images/CaptainAmerica1.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+					<td>
+						<a href="Film/LandOfMine.html">
+							<img src="images/LandOfMine.jpg" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+					<td>
+						<a href="Film/TheTheoryOfEverything.html">
+							<img src="images/TheTheoryOfEverything.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<th style="text-align: center;">
+						<h4><b>Avatar</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Armageddon</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Captain America 1</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Land Of Mine</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>The Theory Of Everything</b></h4>
+					</th>
+				</tr>
+			</table>
+		</div>
+
+		<div class="tabs w3-padding w3-border" id="newRelease" style="display: none">
+			<table>
+				<tr>
+					<td>
+						<a href="Film/ManInBlack.html">
+							<img src="images/ManInBlack.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+					<td>
+						<a href="Film/JohnWick.html">
+							<img src="images/JohnWick.png" alt="John Wick: Parabellum"
+								style="width: 257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/Avatar.html">
+							<img src="images/Avatar.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/ABeautifulMind.html">
+							<img src="images/ABeautifulMind.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/AvengersEndgame.html">
+							<img src="images/AvengersEndgame.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+
+				</tr>
+				<tr>
+					<th style="text-align: center;">
+						<h4><b>Man In Black</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>John Wick: Parabellum</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Avatar</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>A Beautiful Mind</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Avengers Endgame</b></h4>
+					</th>
+				</tr>
+			</table>
+		</div>
+
+		<div class="tabs w3-padding w3-border" id="topView" style="display: none; width: 100%">
+			<table>
+				<tr>
+					<td>
+						<a href="Film/AvengersEndgame.html">
+							<img src="images/AvengersEndgame.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+					<td>
+						<a href="Film/AvengersInfinityWar.html">
+							<img src="images/AvengersInfinityWar.png" alt="John Wick: Parabellum"
+								style="width: 257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/ManInBlack.html">
+							<img src="images/ManInBlack.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/Avatar.html">
+							<img src="images/Avatar.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+					<td>
+						<a href="Film/Armageddon.html">
+							<img src="images/Armageddon.png" alt="The Imitation Game"
+								style="width:  257px; height: 300px; padding: 10px;" class="img">
+						</a>
+					</td>
+
+
+				</tr>
+				<tr>
+					<th style="text-align: center;">
+						<h4><b>Avengers Endgame</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Avengers InfinityWar</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Man In Black</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Avatar</b></h4>
+					</th>
+					<th style="text-align: center;">
+						<h4><b>Armageddon</b></h4>
+					</th>
+				</tr>
+			</table>
+		</div>
 	</div>
-
 </body>
 <script type="text/javascript" src="script.js"></script>
-
 </html>
-
-<script>
-	function check(user, pass) {
-		if (user == null) {
-			document.getElementById('in_user').innerHTML("invalid");
-			document.getElementById('in_user').style.color("Red");
-		}
-		if (pass == null) {
-			docuemnt.getElementById('in_pass').innerHTML("invalid");
-		}
-	}
-</script>
