@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        //login
+        $(document).ready(function () {
+            $(document.getElementById('btn_login')).click(function () {
+                $(document.getElementById('login1')).animate({
+                    top: '400px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $(document.getElementById('login_close')).click(function () {
+                $(document.getElementById('login1')).animate({
+                    top: '-400px'
+                });
+            });
+        });
+
+        //sign up
+        $(document).ready(function () {
+            $(document.getElementById('btn_signup')).click(function () {
+                $(document.getElementById('signup1')).animate({
+                    top: '500px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $(document.getElementById('close_signup')).click(function () {
+                $(document.getElementById('signup1')).animate({
+                    top: '-500px'
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div style="width: 20%; float: left; margin-right: 100px">
+                <a href="index.html">
+                    <img src="images/logoDFB.jpeg" id="logo">
+                </a>
+            </div>
+            <div style="float: left;">
+                <h1>
+                    Selamat Datang di Download Film Baru
+                </h1>
+            </div>
+        </div>
+
+        <div class="w3-display-topright" id="div_sign">
+            <input type="button" id="btn_login" value="Log In"
+                style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
+                onclick="document.getElementById('login').style.display='block'">
+            <input type="button" id="btn_signup" value="Sign Up"
+                style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
+                onclick="document.getElementById('signup').style.display='block'">
+        </div>
+
+        <div class="w3-bar w3-flat-belize-hole" style="text-align: center; font-size: 24px;">
+            <a class="w3-button " href="Index.html">
+                Home
+            </a>
+            <a class="w3-button w3-white" href="">
+                Genre
+            </a>
+            <a class="w3-button" href="pages/userByRegion.html">
+                Users by Region
+            </a>
+            <a class="w3-button" href="pages/fastest.html">
+                Fastest Internet
+            </a>
+        </div>
+    </header>
+
+    <div id="signup" class="w3-modal">
+        <div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center;  margin-top: -500px"
+            id="signup1">
+            <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright"
+                id="close_signup">
+                &times;
+            </span>
+            <b>Sign Up</b>
+            <br>
+            <br>
+            <form>
+                <table style="margin: auto;">
+                    <tr>
+                        <th>
+                            Username
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            E-mail
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Password
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="password">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <input type="checkbox"> I already agree to the <a href="#" style="color: blue">Terms and Conditions</a>
+                <br>
+                <table style="margin: auto;">
+                    <tr>
+                        <td>
+                            <input type="text" style="width: 50%;">
+                        </td>
+                        <td>
+                            <span>
+                                Captcha
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <span onclick="document.getElementById('signup').style.display='none'" class="w3-display-middlebottom"
+                    id="close_signup">
+                    <input type="submit" value="Sign Up">
+                </span>
+            </form>
+            <br>
+        </div>
+    </div>
+
+    <div class="w3-modal" id="login">
+        <!--  margin-top: -400px -->
+        <div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center; margin-top: -400px"
+            id="login1">
+            <span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-display-topright"
+                id="login_close">
+                &times;
+            </span>
+            <b>Sign In</b>
+            <br>
+            <br>
+            <form id="login">
+                <table style="margin: auto;">
+                    <tr>
+                        <th>
+                            Username / E-mail
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type=" text" id="in_user" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Password
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="password" id="in_pass" required="">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="Sign In" style="margin: 20px" onsubmit="">
+            </form>
+        </div>
+    </div>
+
+    <div class="w3-container" style="font-size: 24px;" id="genre">
+        <h2 class="w3-border-bottom">Genre</h2>
+        <div>
+            <!-- ACTION -->
+            <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="showCont('action')"
+                style="width:100%; text-align: left;">Action</button>
+            <table id="action" style="display:none">
+                <tr>
+                    <td>
+                        <a href="Film/AStarIsBorn.html">
+                            <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                style="width:  257px; height: 300px; padding: 10px;" class="img">
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="Film/ManInBlack.html">
+                            <img src="images/ManInBlack.png" alt="Man In Black"
+                                style="width:  257px; height: 300px; padding: 10px;" class="img">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: center;">
+                        <h4><b>A Star is Born</b></h4>
+                    </th>
+                    <th style="text-align: center;">
+                        <h4><b>Main In Black</b></h4>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <!--  -->
+        <div>
+            <!-- DRAMA -->
+            <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="showCont('drama')"
+                style="width:100%; text-align: left;">Drama</button>
+            <table id="drama" style="display:none">
+                <tr>
+                    <td>
+                        <a href="Film/AStarIsBorn.html">
+                            <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                style="width:  257px; height: 300px; padding: 10px;" class="img">
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="Film/ManInBlack.html">
+                            <img src="images/ManInBlack.png" alt="Man In Black"
+                                style="width:  257px; height: 300px; padding: 10px;" class="img">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: center;">
+                        <h4><b>A Star is Born</b></h4>
+                    </th>
+                    <th style="text-align: center;">
+                        <h4><b>Main In Black</b></h4>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <!-- -------------------------------------------------------------------------- -->
+        <div>
+            <!-- ADVENTURE -->
+            <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="showCont('adventure')"
+                style="width:100%; text-align: left;">Adventure</button>
+            <table id="adventure" style="display:none">
+                <tr>
+                    <td>
+                        <a href="Film/AStarIsBorn.html">
+                            <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                style="width:  257px; height: 300px; padding: 10px;" class="img">
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="Film/ManInBlack.html">
+                            <img src="images/ManInBlack.png" alt="Man In Black"
+                                style="width:  257px; height: 300px; padding: 10px;" class="img">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: center;">
+                        <h4><b>A Star is Born</b></h4>
+                    </th>
+                    <th style="text-align: center;">
+                        <h4><b>Main In Black</b></h4>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+</html>

@@ -16,6 +16,40 @@ function openContent(obj, idContentContainer) {
     obj.className += " w3-flat-peter-river";
 }
 
+function showCont(id) {
+    var x = document.getElementById(id);
+
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    }
+    else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
++ function ($) {
+    'use strict';
+
+    var dropZone = document.getElementById('drop-zone');
+
+    dropZone.ondrop = function (e) {
+        e.preventDefault();
+        this.className = 'upload-drop-zone dropped';
+        $(this).html("File dropped");
+    }
+
+    dropZone.ondragover = function () {
+        this.className = 'upload-drop-zone drop';
+        return false;
+    }
+
+    dropZone.ondragleave = function () {
+        this.className = 'upload-drop-zone';
+        return false;
+    }
+
+};
+
 var films = ["2012", "A Beautiful Mind", "A Star is Born", "Annabelle", "Armageddon", "Avatar (2009)", "Avengers: End Game", "Avengers: Infinity War", "Barbie",
     "Batman: The Dark Knight", "Beauty and The Beast", "Black Panther", "Boss Baby", "Bruce Almighty", "Bumblebee", "Captain America: The First Avenger",
     "Captain America: The Winter Soldier", "Cinderella", "Doctor Strange", "Dragon Ball", "Elysium", "Evan Almighty", "Extraterrestrial", "Fairy Tail",
@@ -116,19 +150,21 @@ function autocomplete(input, arr) {
 }
 autocomplete(document.getElementById("myInput"), films);
 
-$('.carousel[data-type="multi"] .item').each(function() {
-	var next = $(this).next();
-	if (!next.length) {
-		next = $(this).siblings(':first');
-	}
-	next.children(':first-child').clone().appendTo($(this));
+$('.carousel[data-type="multi"] .item').each(function () {
+    var next = $(this).next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
 
-	for (var i = 0; i < 2; i++) {
-		next = next.next();
-		if (!next.length) {
-			next = $(this).siblings(':first');
-		}
+    for (var i = 0; i < 2; i++) {
+        next = next.next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
 
-		next.children(':first-child').clone().appendTo($(this));
-	}
+        next.children(':first-child').clone().appendTo($(this));
+    }
 });
+
+(jQuery)
