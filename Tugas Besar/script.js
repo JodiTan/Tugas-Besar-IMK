@@ -1,18 +1,4 @@
 var myIndex = 0;
-// carousel();
-
-// function carousel() {
-//   var i;
-//   var x = document.getElementsByClassName("slides");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-//   myIndex++;
-//   if (myIndex > x.length) {myIndex = 1}    
-//   x[myIndex-1].style.display = "block";  
-//   setTimeout(carousel, 8000); // Change image every 2 seconds
-// }
-
 function openContent(obj, idContentContainer) {
     var i, x, tablinks;
 
@@ -29,17 +15,6 @@ function openContent(obj, idContentContainer) {
     document.getElementById(idContentContainer).style.display = "block";
     obj.className += " w3-flat-peter-river";
 }
-
-// function showCont(id) {
-//     var x = document.getElementById(id);
-
-//     if (x.className.indexOf("w3-show") == -1) {
-//         x.className += " w3-show";
-//     }
-//     else {
-//         x.className = x.className.replace(" w3-show", "");
-//     }
-// }
 
 var films = ["2012", "A Beautiful Mind", "A Star is Born", "Annabelle", "Armageddon", "Avatar (2009)", "Avengers: End Game", "Avengers: Infinity War", "Barbie",
     "Batman: The Dark Knight", "Beauty and The Beast", "Black Panther", "Boss Baby", "Bruce Almighty", "Bumblebee", "Captain America: The First Avenger",
