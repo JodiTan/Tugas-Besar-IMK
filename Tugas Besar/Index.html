@@ -87,11 +87,6 @@
 				next.children(':first-child').clone().appendTo($(this));
 			}
 		});
-
-		function changePage(){
-			var halaman = document.getElementById("myInput").value;
-			window.location = "Film/" + halaman + ".html";
-		};
 	</script>
 	<style>
 		body {
@@ -271,10 +266,11 @@
 		}
 	</style>
 </head>
+<!-- search -->
 <div id="div_search" style="float: right; padding-top: 110px; padding-right: 10px;">
 	<div style="float:right; margin-left: 15px;">
 		<button style="height: 40px;">
-			<i class="fa fa-search" style="size: 20px; padding-left: 10px; padding-right: 10px;" onclick="changePage()">
+			<i class="fa fa-search" style="size: 20px; padding-left: 10px; padding-right: 10px;" onclick="changePageFromIndex()">
 			</i>
 		</button>
 
@@ -282,8 +278,6 @@
 	<div class="autocomplete" style="float: right;">
 		<input type="text" name="films" id="myInput" placeholder="Search..">
 	</div>
-
-
 </div>
 
 <body>

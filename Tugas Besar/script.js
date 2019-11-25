@@ -50,8 +50,8 @@ function showCont(id) {
 
 };
 
-var films = ["2012", "A Beautiful Mind", "A Star is Born", "Annabelle", "Armageddon", "Avatar (2009)", "Avengers: End Game", "Avengers: Infinity War", "Barbie",
-    "Batman: The Dark Knight", "Beauty and The Beast", "Black Panther", "Boss Baby", "Bruce Almighty", "Bumblebee", "Captain America: The First Avenger",
+var films = ["2012", "A Beautiful Mind", "A Star is Born", "Annabelle", "Armageddon", "Avatar (2009)", "Avengers End Game", "Avengers Infinity War", "Barbie",
+    "Batman The Dark Knight", "Beauty and The Beast", "Black Panther", "Boss Baby", "Bruce Almighty", "Bumblebee", "Captain America: The First Avenger",
     "Captain America: The Winter Soldier", "Cinderella", "Doctor Strange", "Dragon Ball", "Elysium", "Evan Almighty", "Extraterrestrial", "Fairy Tail",
     "Fast and Furious 7", "Final Destination 3", "Final Fantasy The Movie", "Five Minarets in New York", "Frontera", "Garfield The Movie", "Ghost Rider",
     "God Must Be Crazy", "Gran Torino", "Gravity", "Guardians of the Galaxy", "Hachiko", "Harry Potter", "Hellboy", "Honeymoon", "Inception",
@@ -166,5 +166,19 @@ $('.carousel[data-type="multi"] .item').each(function () {
         next.children(':first-child').clone().appendTo($(this));
     }
 });
+
+
+
+function changePageFromIndex() {
+    var halaman = document.getElementById("myInput").value;
+    window.location = "Film/" + halaman + ".html";
+    document.getElementById("myInput").innerHTML("");
+};
+
+function changePage() {
+    var halaman = document.getElementById("myInput").value;
+    window.location = halaman + ".html";
+    document.getElementById("myInput").innerHTML("");
+};
 
 (jQuery)
