@@ -87,6 +87,11 @@
 				next.children(':first-child').clone().appendTo($(this));
 			}
 		});
+
+		function changePage(){
+			var halaman = document.getElementById("myInput").value;
+			window.location = "Film/" + halaman + ".html";
+		};
 	</script>
 	<style>
 		body {
@@ -267,14 +272,18 @@
 	</style>
 </head>
 <div id="div_search" style="float: right; padding-top: 110px; padding-right: 10px;">
+	<div style="float:right; margin-left: 15px;">
+		<button style="height: 40px;">
+			<i class="fa fa-search" style="size: 20px; padding-left: 10px; padding-right: 10px;" onclick="changePage()">
+			</i>
+		</button>
+
+	</div>
 	<div class="autocomplete" style="float: right;">
 		<input type="text" name="films" id="myInput" placeholder="Search..">
 	</div>
 
-	<div style="float:right; margin-top: 10px;">
-		<i class="fa fa-search" style="margin-right: 10px; size: 20px;">
-		</i>
-	</div>
+
 </div>
 
 <body>
@@ -435,7 +444,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-11 col-md-10 col-centered">
-
 				<div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="8000">
 					<div class="carousel-inner">
 						<div class="item active">
@@ -536,14 +544,14 @@
 			<table>
 				<tr>
 					<td>
-						<a href="Film/JohnWick3.html">
+						<a href="Film/John Wick 3.html">
 							<img src="images/JohnWick.png" alt="John Wick: Parabellum"
 								style="width: 257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 
 					<td>
-						<a href="Film/TheImitationGame.html">
+						<a href="Film/The Imitation Game.html">
 							<img src="images/TheImitationGame.png" alt="The Imitation Game"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
@@ -551,20 +559,20 @@
 
 					<td>
 						<a href="Film/2012.html">
-							<img src="images/2012.png" alt="2012"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
+							<img src="images/2012.png" alt="2012" style="width:  257px; height: 300px; padding: 10px;"
+								class="img">
 						</a>
 					</td>
 
 					<td>
-						<a href="Film/AStarIsBorn.html">
+						<a href="Film/A Star Is Born.html">
 							<img src="images/AStarIsBorn.png" alt="A Star Is Born"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 
 					<td>
-						<a href="Film/ManInBlack.html">
+						<a href="Film/Man In Black.html">
 							<img src="images/ManInBlack.png" alt="Man In Black"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
@@ -602,19 +610,19 @@
 					</td>
 
 					<td>
-						<a href="Film/CaptainAmerica.html">
+						<a href="Film/Captain America 1.html">
 							<img src="images/CaptainAmerica1.png" alt="Captain America 1"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 					<td>
-						<a href="Film/LandOfMine.html">
+						<a href="Film/Land Of Mine.html">
 							<img src="images/LandOfMine.jpg" alt="Land Of Mine"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 					<td>
-						<a href="Film/TheTheoryOfEverything.html">
+						<a href="Film/The Theory Of Everything.html">
 							<img src="images/TheTheoryOfEverything.png" alt="The Theory Of Everything"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
@@ -644,13 +652,13 @@
 			<table>
 				<tr>
 					<td>
-						<a href="Film/ManInBlack.html">
+						<a href="Film/Man In Black.html">
 							<img src="images/ManInBlack.png" alt="Man In Black"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 					<td>
-						<a href="Film/JohnWick.html">
+						<a href="Film/John Wick 3.html">
 							<img src="images/JohnWick.png" alt="John Wick: Parabellum"
 								style="width: 257px; height: 300px; padding: 10px;" class="img">
 						</a>
@@ -664,14 +672,14 @@
 					</td>
 
 					<td>
-						<a href="Film/ABeautifulMind.html">
+						<a href="Film/A Beautiful Mind.html">
 							<img src="images/ABeautifulMind.png" alt="A Beautiful Mind"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 
 					<td>
-						<a href="Film/AvengersEndgame.html">
+						<a href="Film/Avengers Endgame.html">
 							<img src="images/AvengersEndgame.png" alt="Avengers Endgame"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
@@ -703,20 +711,20 @@
 			<table>
 				<tr>
 					<td>
-						<a href="Film/AvengersEndgame.html">
+						<a href="Film/Avengers Endgame.html">
 							<img src="images/AvengersEndgame.png" alt="Avengers Endgame"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 					<td>
-						<a href="Film/AvengersInfinityWar.html">
+						<a href="Film/Avengers Infinity War.html">
 							<img src="images/AvengersInfinityWar.png" alt="Avengers Infinity War"
 								style="width: 257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 
 					<td>
-						<a href="Film/ManInBlack.html">
+						<a href="Film/Man In Black.html">
 							<img src="images/ManInBlack.png" alt="Man In Black"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
