@@ -5,46 +5,23 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        a {
+            text-decoration: none;
+            ;
+        }
 
-    <script>
-        //login
-        $(document).ready(function () {
-            $(document.getElementById('btn_login')).click(function () {
-                $(document.getElementById('login1')).animate({
-                    top: '400px'
-                });
-            });
-        });
+        button {
+            width: 40px
+        }
+    </style>
 
-        $(document).ready(function () {
-            $(document.getElementById('login_close')).click(function () {
-                $(document.getElementById('login1')).animate({
-                    top: '-400px'
-                });
-            });
-        });
-
-        //sign up
-        $(document).ready(function () {
-            $(document.getElementById('btn_signup')).click(function () {
-                $(document.getElementById('signup1')).animate({
-                    top: '500px'
-                });
-            });
-        });
-
-        $(document).ready(function () {
-            $(document.getElementById('close_signup')).click(function () {
-                $(document.getElementById('signup1')).animate({
-                    top: '-500px'
-                });
-            });
-        });
-    </script>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div>
             <div style="width: 20%; float: left; margin-right: 100px">
                 <a href="index.html">
@@ -58,20 +35,26 @@
             </div>
         </div>
 
-        <div class="w3-display-topright" id="div_sign">
-            <input type="button" id="btn_login" value="Log In"
-                style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
-                onclick="document.getElementById('login').style.display='block'">
-            <input type="button" id="btn_signup" value="Sign Up"
-                style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
-                onclick="document.getElementById('signup').style.display='block'">
+        <!-- search -->
+        <div id="div_search" style="float: right; padding-top: 110px; padding-right: 10px;">
+            <div style="float:right; margin-left: 15px;">
+                <button style="height: 40px;">
+                    <i class="fa fa-search" style="size: 20px; padding-left: 10px; padding-right: 10px;"
+                        onclick="changePageFromIndex()">
+                    </i>
+                </button>
+
+            </div>
+            <div class="autocomplete" style="float: right;">
+                <input type="text" name="films" id="myInput" placeholder="Search..">
+            </div>
         </div>
 
-        <div class="w3-bar w3-flat-belize-hole" style="text-align: center; font-size: 24px;">
+        <div class="w3-bar w3-blue" style="text-align: center; font-size: 24px;">
             <a class="w3-button " href="Index.html">
                 Home
             </a>
-            <a class="w3-button w3-white" href="">
+            <a class="w3-button w3-grey" href="">
                 Genre
             </a>
             <a class="w3-button" href="pages/userByRegion.html">
@@ -83,214 +66,475 @@
         </div>
     </header>
 
-    <div id="signup" class="w3-modal">
-        <div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center;  margin-top: -500px"
-            id="signup1">
-            <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright"
-                id="close_signup">
-                &times;
-            </span>
-            <b>Sign Up</b>
-            <br>
-            <br>
-            <form>
-                <table style="margin: auto;">
-                    <tr>
-                        <th>
-                            Username
-                        </th>
-                        <td>
-                            :
-                        </td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            E-mail
-                        </th>
-                        <td>
-                            :
-                        </td>
-                        <td>
-                            <input type="email">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            Password
-                        </th>
-                        <td>
-                            :
-                        </td>
-                        <td>
-                            <input type="password">
-                        </td>
-                    </tr>
-                </table>
-                <br>
-                <input type="checkbox"> I already agree to the <a href="#" style="color: blue">Terms and Conditions</a>
-                <br>
-                <table style="margin: auto;">
-                    <tr>
-                        <td>
-                            <input type="text" style="width: 50%;">
-                        </td>
-                        <td>
-                            <span>
-                                Captcha
-                            </span>
-                        </td>
-                    </tr>
-                </table>
-                <br>
-                <span onclick="document.getElementById('signup').style.display='none'" class="w3-display-middlebottom"
-                    id="close_signup">
-                    <input type="submit" value="Sign Up">
-                </span>
-            </form>
-            <br>
-        </div>
-    </div>
-
-    <div class="w3-modal" id="login">
-        <!--  margin-top: -400px -->
-        <div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center; margin-top: -400px"
-            id="login1">
-            <span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-display-topright"
-                id="login_close">
-                &times;
-            </span>
-            <b>Sign In</b>
-            <br>
-            <br>
-            <form id="login">
-                <table style="margin: auto;">
-                    <tr>
-                        <th>
-                            Username / E-mail
-                        </th>
-                        <td>
-                            :
-                        </td>
-                        <td>
-                            <input type=" text" id="in_user" required="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            Password
-                        </th>
-                        <td>
-                            :
-                        </td>
-                        <td>
-                            <input type="password" id="in_pass" required="">
-                        </td>
-                    </tr>
-                </table>
-                <br>
-                <input type="submit" value="Sign In" style="margin: 20px" onsubmit="">
-            </form>
-        </div>
-    </div>
 
     <div class="w3-container" style="font-size: 24px;" id="genre">
         <h2 class="w3-border-bottom">Genre</h2>
-        <div>
-            <!-- ACTION -->
-            <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="showCont('action')"
-                style="width:100%; text-align: left;">Action</button>
-            <table id="action" style="display:none">
+        <div class="tabs w3-border" id="page1">
+            <div>
+                <!-- ACTION -->
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('action')"
+                    style="width:100%; text-align: left;">Action</button>
+                <table id="action" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <!-- ------------------------------------------------------------------------------------------- -->
+            <!--  -->
+            <div>
+                <!-- DRAMA -->
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('drama')"
+                    style="width:100%; text-align: left;">Drama</button>
+                <table id="drama" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <!-- -------------------------------------------------------------------------- -->
+            <div>
+                <!-- ADVENTURE -->
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('adventure')"
+                    style="width:100%; text-align: left;">Adventure</button>
+                <table id="adventure" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Biography')"
+                    style="width:100%; text-align: left;">Biography</button>
+                <table id="Biography" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Buddy')"
+                    style="width:100%; text-align: left;">Buddy</button>
+                <table id="Buddy" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Comedy')"
+                    style="width:100%; text-align: left;">Comedy</button>
+                <table id="Comedy" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Costume drama')"
+                    style="width:100%; text-align: left;">Costume drama</button>
+                <table id="Costume drama" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Crime')"
+                    style="width:100%; text-align: left;">Crime</button>
+                <table id="Crime" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Disaster')"
+                    style="width:100%; text-align: left;">Disaster</button>
+                <table id="Disaster" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Drama')"
+                    style="width:100%; text-align: left;">Drama</button>
+                <table id="Drama" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Family')"
+                    style="width:100%; text-align: left;">Family</button>
+                <table id="Family" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Fantasy')"
+                    style="width:100%; text-align: left;">Fantasy</button>
+                <table id="Fantasy" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Historical fiction')"
+                    style="width:100%; text-align: left;">Historical fiction</button>
+                <table id="Historical fiction" style="display:none">
+                    <tr>
+                        <td>
+                            <a href="Film/AStarIsBorn.html">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="Film/ManInBlack.html">
+                                <img src="images/ManInBlack.png" alt="Man In Black"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">
+                            <h4><b>A Star is Born</b></h4>
+                        </th>
+                        <th style="text-align: center;">
+                            <h4><b>Main In Black</b></h4>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tabs w3-border" id="page2" style="display: none">
+            <table>
                 <tr>
                     <td>
-                        <a href="Film/AStarIsBorn.html">
-                            <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                        <a href="Film/Man In Black.html">
+                            <img src="images/ManInBlack.png" alt="Man In Black"
+                                style="width:  257px; height: 300px; padding: 10px;" class="img">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="Film/John Wick 3.html">
+                            <img src="images/JohnWick.png" alt="John Wick: Parabellum"
+                                style="width: 257px; height: 300px; padding: 10px;" class="img">
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="Film/Avatar.html">
+                            <img src="images/Avatar.png" alt="Avatar"
                                 style="width:  257px; height: 300px; padding: 10px;" class="img">
                         </a>
                     </td>
 
                     <td>
-                        <a href="Film/ManInBlack.html">
-                            <img src="images/ManInBlack.png" alt="Man In Black"
-                                style="width:  257px; height: 300px; padding: 10px;" class="img">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <th style="text-align: center;">
-                        <h4><b>A Star is Born</b></h4>
-                    </th>
-                    <th style="text-align: center;">
-                        <h4><b>Main In Black</b></h4>
-                    </th>
-                </tr>
-            </table>
-        </div>
-        <!-- ------------------------------------------------------------------------------------------- -->
-        <!--  -->
-        <div>
-            <!-- DRAMA -->
-            <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="showCont('drama')"
-                style="width:100%; text-align: left;">Drama</button>
-            <table id="drama" style="display:none">
-                <tr>
-                    <td>
-                        <a href="Film/AStarIsBorn.html">
-                            <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                        <a href="Film/A Beautiful Mind.html">
+                            <img src="images/ABeautifulMind.png" alt="A Beautiful Mind"
                                 style="width:  257px; height: 300px; padding: 10px;" class="img">
                         </a>
                     </td>
 
                     <td>
-                        <a href="Film/ManInBlack.html">
-                            <img src="images/ManInBlack.png" alt="Man In Black"
-                                style="width:  257px; height: 300px; padding: 10px;" class="img">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <th style="text-align: center;">
-                        <h4><b>A Star is Born</b></h4>
-                    </th>
-                    <th style="text-align: center;">
-                        <h4><b>Main In Black</b></h4>
-                    </th>
-                </tr>
-            </table>
-        </div>
-        <!-- -------------------------------------------------------------------------- -->
-        <div>
-            <!-- ADVENTURE -->
-            <button class="w3-button w3-bar-item w3-flat-peter-river tablink" onclick="showCont('adventure')"
-                style="width:100%; text-align: left;">Adventure</button>
-            <table id="adventure" style="display:none">
-                <tr>
-                    <td>
-                        <a href="Film/AStarIsBorn.html">
-                            <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                        <a href="Film/Avengers Endgame.html">
+                            <img src="images/AvengersEndgame.png" alt="Avengers Endgame"
                                 style="width:  257px; height: 300px; padding: 10px;" class="img">
                         </a>
                     </td>
 
-                    <td>
-                        <a href="Film/ManInBlack.html">
-                            <img src="images/ManInBlack.png" alt="Man In Black"
-                                style="width:  257px; height: 300px; padding: 10px;" class="img">
-                        </a>
-                    </td>
+
                 </tr>
                 <tr>
                     <th style="text-align: center;">
-                        <h4><b>A Star is Born</b></h4>
+                        <h4><b>Man In Black</b></h4>
                     </th>
                     <th style="text-align: center;">
-                        <h4><b>Main In Black</b></h4>
+                        <h4><b>John Wick: Parabellum</b></h4>
+                    </th>
+                    <th style="text-align: center;">
+                        <h4><b>Avatar</b></h4>
+                    </th>
+                    <th style="text-align: center;">
+                        <h4><b>A Beautiful Mind</b></h4>
+                    </th>
+                    <th style="text-align: center;">
+                        <h4><b>Avengers Endgame</b></h4>
                     </th>
                 </tr>
             </table>
         </div>
+
+        <div style="text-align: center;">
+            <a>
+                <button class="btnPage w3-button" onclick="nextPage(this,'page1')" id="btnPage1">
+                    1
+                </button>
+            </a>
+
+            <a>
+                <button class="btnPage w3-button" onclick="nextPage(this,'page2')" id="btnPage2">
+                    2
+                </button>
+            </a>
+
+            <a>
+                <button class="btnPage w3-button" onclick="nextPage(this,'page3')">
+                    3
+                </button>
+            </a>
+        </div>
+
     </div>
 </body>
 <script type="text/javascript" src="script.js"></script>

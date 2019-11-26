@@ -9,11 +9,22 @@ function openContent(obj, idContentContainer) {
 
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-flat-peter-river", "");
+        tablinks[i].className = tablinks[i].className.replace(" w3-grey", "");
     }
 
     document.getElementById(idContentContainer).style.display = "block";
-    obj.className += " w3-flat-peter-river";
+    obj.className += " w3-grey";
+}
+
+function nextPage(obj, idContentContainer) {
+    var i, x, tablinks, btn;
+
+    x = document.getElementsByClassName("tabs");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+
+    document.getElementById(idContentContainer).style.display = "block";
 }
 
 function showCont(id) {
