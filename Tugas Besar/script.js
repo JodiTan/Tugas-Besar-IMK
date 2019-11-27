@@ -16,13 +16,20 @@ function openContent(obj, idContentContainer) {
     obj.className += " w3-grey";
 }
 
-function nextPage(obj, idContentContainer) {
-    var i, x, tablinks, btn;
+function nextPage(obj, idContentContainer, id) {
+    var i,j, x, tablinks, btn;
 
     x = document.getElementsByClassName("tabs");
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
+
+    btn = document.getElementsByClassName("btnPage");
+    for(j = 0 ; j <btn.length; j++){
+        btn[j].style.color = "black";
+    }
+
+    document.getElementById(id).style.color = "blue";
 
     document.getElementById(idContentContainer).style.display = "block";
 }
@@ -182,8 +189,11 @@ $('.carousel[data-type="multi"] .item').each(function () {
 
 function changePageFromIndex() {
     var halaman = document.getElementById("myInput").value;
-    window.location = "Film/" + halaman + ".html";
-    document.getElementById("myInput").innerHTML("");
+    if (halaman != "") {
+        window.location = "Film/" + halaman + ".html";
+        document.getElementById("myInput").innerHTML("");
+    }
+
 };
 
 function changePage() {

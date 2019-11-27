@@ -368,6 +368,8 @@
                     </tr>
                 </table>
             </div>
+        </div>
+        <div class="tabs w3-border" id="page2" style="display: none">
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Family')"
                     style="width:100%; text-align: left;">Family</button>
@@ -456,80 +458,23 @@
                 </table>
             </div>
         </div>
-        <div class="tabs w3-border" id="page2" style="display: none">
-            <table>
-                <tr>
-                    <td>
-                        <a href="Film/Man In Black.html">
-                            <img src="images/ManInBlack.png" alt="Man In Black"
-                                style="width:  257px; height: 300px; padding: 10px;" class="img">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="Film/John Wick 3.html">
-                            <img src="images/JohnWick.png" alt="John Wick: Parabellum"
-                                style="width: 257px; height: 300px; padding: 10px;" class="img">
-                        </a>
-                    </td>
-
-                    <td>
-                        <a href="Film/Avatar.html">
-                            <img src="images/Avatar.png" alt="Avatar"
-                                style="width:  257px; height: 300px; padding: 10px;" class="img">
-                        </a>
-                    </td>
-
-                    <td>
-                        <a href="Film/A Beautiful Mind.html">
-                            <img src="images/ABeautifulMind.png" alt="A Beautiful Mind"
-                                style="width:  257px; height: 300px; padding: 10px;" class="img">
-                        </a>
-                    </td>
-
-                    <td>
-                        <a href="Film/Avengers Endgame.html">
-                            <img src="images/AvengersEndgame.png" alt="Avengers Endgame"
-                                style="width:  257px; height: 300px; padding: 10px;" class="img">
-                        </a>
-                    </td>
-
-
-                </tr>
-                <tr>
-                    <th style="text-align: center;">
-                        <h4><b>Man In Black</b></h4>
-                    </th>
-                    <th style="text-align: center;">
-                        <h4><b>John Wick: Parabellum</b></h4>
-                    </th>
-                    <th style="text-align: center;">
-                        <h4><b>Avatar</b></h4>
-                    </th>
-                    <th style="text-align: center;">
-                        <h4><b>A Beautiful Mind</b></h4>
-                    </th>
-                    <th style="text-align: center;">
-                        <h4><b>Avengers Endgame</b></h4>
-                    </th>
-                </tr>
-            </table>
-        </div>
 
         <div style="text-align: center;">
             <a>
-                <button class="btnPage w3-button" onclick="nextPage(this,'page1')" id="btnPage1">
+                <button class="btnPage w3-button" onclick="nextPage(this,'page1','btnPage1')" id="btnPage1"
+                    style="color: blue;">
                     1
                 </button>
             </a>
 
             <a>
-                <button class="btnPage w3-button" onclick="nextPage(this,'page2')" id="btnPage2">
+                <button class="btnPage w3-button" onclick="nextPage(this,'page2', 'btnPage2')" id="btnPage2">
                     2
                 </button>
             </a>
 
             <a>
-                <button class="btnPage w3-button" onclick="nextPage(this,'page3')">
+                <button class="btnPage w3-button" onclick="nextPage(this,'page3', 'btnPage3')" id="btnPage3">
                     3
                 </button>
             </a>
