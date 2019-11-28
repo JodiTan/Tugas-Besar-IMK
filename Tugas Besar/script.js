@@ -17,7 +17,7 @@ function openContent(obj, idContentContainer) {
 }
 
 function nextPage(obj, idContentContainer, id) {
-    var i,j, x, tablinks, btn;
+    var i, j, x, tablinks, btn;
 
     x = document.getElementsByClassName("tabs");
     for (i = 0; i < x.length; i++) {
@@ -25,7 +25,7 @@ function nextPage(obj, idContentContainer, id) {
     }
 
     btn = document.getElementsByClassName("btnPage");
-    for(j = 0 ; j <btn.length; j++){
+    for (j = 0; j < btn.length; j++) {
         btn[j].style.color = "black";
     }
 
@@ -185,21 +185,70 @@ $('.carousel[data-type="multi"] .item').each(function () {
     }
 });
 
+var login = false;
 
-
+//changePage from index to film
 function changePageFromIndex() {
     var halaman = document.getElementById("myInput").value;
-    if (halaman != "") {
+    if (halaman != "" && (window.location.hash == true || login == true)) {
         window.location = "Film/" + halaman + ".html";
         document.getElementById("myInput").innerHTML("");
+    } else {
+        alert("You Need To Login First");
     }
-
 };
 
+//changePage from film to film
 function changePage() {
     var halaman = document.getElementById("myInput").value;
     window.location = halaman + ".html";
     document.getElementById("myInput").innerHTML("");
 };
+
+//klik film dari index
+function klikGambar(id) {
+    var username = document.getElementById("in_user").value;
+    if (window.location.hash == "#true" || login == true) {
+        window.location = "Film/" + id + ".html#" + username;
+    } else {
+        alert(window.location.hash);
+        // alert(login);
+    }
+}
+
+//sudah signin
+function signin() {
+    var username = document.getElementById("in_user").value;
+    var password = document.getElementById("in_pass").value;
+    if (username != "" && password != "") {
+        login = true;
+        window.location.hash = true;
+        alert(window.location.hash);
+        document.getElementById("beforeLogin").style.display = "none";
+        document.getElementById("afterLogin").style.display = "block";
+        document.getElementById("nama").innerHTML = username;
+        document.getElementById('login').style.display = "none";
+    }
+}
+
+//logout
+function logout() {
+    window.location.hash = "";
+    document.getElementById("beforeLogin").style.display = "block";
+    document.getElementById("afterLogin").style.display = "none";
+    document.getElementById("nama").innerHTML = "";
+    login = false;
+}
+
+//from film to index
+function setHash(){
+    document.location = "../Index.html#true";
+}
+
+//set nama di Film
+function setNama(){
+    var nama = window.location.hash;
+    document.getElementById("nama").innerHTML = nama;
+}
 
 (jQuery)

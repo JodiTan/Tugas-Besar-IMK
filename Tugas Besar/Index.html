@@ -283,6 +283,15 @@
 </div>
 
 <body>
+	<script>
+		window.onload = function () {
+			if (window.location.hash == "#true") {
+				document.getElementById("beforeLogin").style.display = "none";
+				document.getElementById("afterLogin").style.display = "block";
+				document.getElementById('login').style.display = "none";
+			}
+		};
+	</script>
 	<header>
 		<div>
 			<div style="width: 20%; float: left; margin-right: 100px">
@@ -298,12 +307,27 @@
 		</div>
 
 		<div class="w3-display-topright" id="div_sign">
-			<input type="button" id="btn_login" value="Log In"
-				style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
-				onclick="document.getElementById('login').style.display='block'">
-			<input type="button" id="btn_signup" value="Sign Up"
-				style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
-				onclick="document.getElementById('signup').style.display='block'">
+			<div id="beforeLogin">
+				<input type="button" id="btn_login" value="Log In"
+					style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
+					onclick="document.getElementById('login').style.display='block'">
+				<input type="button" id="btn_signup" value="Sign Up"
+					style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
+					onclick="document.getElementById('signup').style.display='block'">
+			</div>
+			<div id="afterLogin" style="display: none; font-size: 24px;">
+				<span>
+					Welcome,
+				</span>
+				<span id="nama">
+
+				</span>
+				<br>
+				<input type="button" id="btn_logout" value="Log out"
+					style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;" onclick="logout()">
+
+			</div>
+
 		</div>
 
 		<div class="w3-bar w3-blue" style="text-align: center; font-size: 24px;">
@@ -424,7 +448,7 @@
 					</tr>
 				</table>
 				<br>
-				<input type="submit" value="Sign In" style="margin: 20px" onsubmit="">
+				<input type="submit" value="Sign In" style="margin: 20px" onclick="signin()">
 			</form>
 		</div>
 	</div>
@@ -534,7 +558,7 @@
 			<table style="margin-left: 80px;">
 				<tr>
 					<td>
-						<a href="Film/John Wick 3.html">
+						<a onclick="klikGambar('John Wick 3')">
 							<img src="images/JohnWick.png" alt="John Wick: Parabellum"
 								style="width: 257px; height: 300px; padding: 10px;" class="img">
 						</a>
