@@ -10,7 +10,6 @@
     <style>
         a {
             text-decoration: none;
-            ;
         }
 
         button {
@@ -48,6 +47,30 @@
             <div class="autocomplete" style="float: right;">
                 <input type="text" name="films" id="myInput" placeholder="Search..">
             </div>
+        </div>
+
+        <div class="w3-display-topright" id="div_sign">
+            <div id="beforeLogin">
+                <input type="button" id="btn_login" value="Log In"
+                    style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
+                    onclick="document.getElementById('login').style.display='block'">
+                <input type="button" id="btn_signup" value="Sign Up"
+                    style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
+                    onclick="document.getElementById('signup').style.display='block'">
+            </div>
+            <div id="afterLogin" style="display: none; font-size: 24px;">
+                <span>
+                    Welcome,
+                </span>
+                <span id="nama">
+
+                </span>
+                <br>
+                <input type="button" id="btn_logout" value="Log out"
+                    style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;" onclick="logout()">
+
+            </div>
+
         </div>
 
         <div class="w3-bar w3-blue" style="text-align: center; font-size: 24px;">
@@ -95,38 +118,7 @@
                 </table>
             </div>
             <!-- ------------------------------------------------------------------------------------------- -->
-            <!--  -->
-            <div>
-                <!-- DRAMA -->
-                <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('drama')"
-                    style="width:100%; text-align: left;">Drama</button>
-                <table id="drama" style="display:none">
-                    <tr>
-                        <td>
-                            <a href="Film/A Star Is Born.html">
-                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
-                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
-                            </a>
-                        </td>
-
-                        <td>
-                            <a href="Film/Man In Black.html">
-                                <img src="images/ManInBlack.png" alt="Man In Black"
-                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: center;">
-                            <h4>A Star is Born</h4>
-                        </th>
-                        <th style="text-align: center;">
-                            <h4>Man In Black</h4>
-                        </th>
-                    </tr>
-                </table>
-            </div>
-            <!-- -------------------------------------------------------------------------- -->
+            <!--  -->                        
             <div>
                 <!-- ADVENTURE -->
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('adventure')"
