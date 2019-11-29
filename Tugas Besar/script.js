@@ -211,8 +211,9 @@ function klikGambar(id) {
     if (window.location.hash == "#true" || login == true) {
         window.location = "Film/" + id + ".html#" + username;
     } else {
-        alert(window.location.hash);
-        // alert(login);
+        // alert(window.location.hash);
+        alert("You need to login first")
+        // alert(login);        
     }
 }
 
