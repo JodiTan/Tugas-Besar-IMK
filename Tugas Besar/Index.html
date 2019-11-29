@@ -325,7 +325,7 @@
 			<a class="w3-button w3-grey" href="" style="text-decoration: none;">
 				Home
 			</a>
-			<a class="w3-button" href="genre.html" style="text-decoration: none;">
+			<a class="w3-button" style="text-decoration: none;" onclick="genre()">
 				Genre
 			</a>
 		</div>
@@ -835,7 +835,6 @@
 			document.getElementById('login').style.display = "none";
 			document.getElementById('nama').innerHTML = username;
 		} else {
-			console.log("before login");
 			document.getElementById("beforeLogin").style.display = "block";
 			document.getElementById("afterLogin").style.display = "none";
 		}

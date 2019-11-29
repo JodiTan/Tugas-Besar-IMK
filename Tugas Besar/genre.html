@@ -62,22 +62,21 @@
                 <span>
                     Welcome,
                 </span>
-                <span id="nama">
+                <span id="namaDiGenre">
 
                 </span>
                 <br>
                 <input type="button" id="btn_logout" value="Log out"
                     style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;" onclick="logout()">
-
             </div>
 
         </div>
 
         <div class="w3-bar w3-blue" style="text-align: center; font-size: 24px;">
-            <a class="w3-button " href="Index.html">
+            <a class="w3-button " onclick="home()">
                 Home
             </a>
-            <a class="w3-button w3-grey" href="">
+            <a class="w3-button w3-grey">
                 Genre
             </a>
         </div>
@@ -378,8 +377,8 @@
                     <tr>
                         <td>
                             <a href="Film/2012.html">
-                                <img src="images/2012.png" alt="2012" style="width: 250px; height: 300px; padding: 10px;"
-                                    class="img">
+                                <img src="images/2012.png" alt="2012"
+                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
@@ -425,8 +424,8 @@
                     <tr>
                         <td>
                             <a href="Film/2012.html">
-                                <img src="images/2012.png" alt="2012" style="width: 250px; height: 300px; padding: 10px;"
-                                    class="img">
+                                <img src="images/2012.png" alt="2012"
+                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
@@ -898,8 +897,8 @@
                     <tr>
                         <td>
                             <a href="Film/2012.html">
-                                <img src="images/2012.png" alt="2012" style="width: 250px; height: 300px; padding: 10px;"
-                                    class="img">
+                                <img src="images/2012.png" alt="2012"
+                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
@@ -1055,8 +1054,8 @@
                     <tr>
                         <td>
                             <a href="Film/2012.html">
-                                <img src="images/2012.png" alt="2012" style="width: 250px; height: 300px; padding: 10px;"
-                                    class="img">
+                                <img src="images/2012.png" alt="2012"
+                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
@@ -1161,5 +1160,18 @@
 
 </body>
 <script type="text/javascript" src="script.js"></script>
+<script>
+    window.onload = function () {
+        if (window.location.hash) {
+            var nama = window.location.hash.substr(5);
+            document.getElementById("beforeLogin").style.display = "none";
+            document.getElementById("afterLogin").style.display = "block";
+            document.getElementById('namaDiGenre').innerHTML = nama;
+        } else {
+            document.getElementById("beforeLogin").style.display = "block";
+            document.getElementById("afterLogin").style.display = "none";
+        }
+    };
+</script>
 
 </html>

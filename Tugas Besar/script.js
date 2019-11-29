@@ -190,8 +190,9 @@ var login = false;
 //changePage from index to film
 function changePageFromIndex() {
     var halaman = document.getElementById("myInput").value;
-    if (halaman != "" && (window.location.hash == true || login == true)) {
-        window.location = "Film/" + halaman + ".html";
+    var nama = window.location.hash.substr(5);
+    if (halaman != "" && window.location.hash) {
+        window.location = "Film/" + halaman + ".html#true" + nama;
         document.getElementById("myInput").innerHTML("");
     } else {
         alert("You Need To Login First");
@@ -201,8 +202,11 @@ function changePageFromIndex() {
 //changePage from film to film
 function changePage() {
     var halaman = document.getElementById("myInput").value;
-    window.location = halaman + ".html";
-    document.getElementById("myInput").innerHTML("");
+    var nama = window.location.hash.substr(5);
+    if (halaman != "" && window.location.hash) {
+        window.location = halaman + ".html#true" + nama;
+        document.getElementById("myInput").innerHTML("");
+    }
 };
 
 //klik film dari index
@@ -242,25 +246,42 @@ function logout() {
 }
 
 //from film to index
-function setHash(){
+function setHash() {
     var nama = window.location.hash.substr(5);
     document.location = "../Index.html#true" + nama;
 }
 
 //set nama di Film
-function setNama(){
+function setNama() {
     var nama = window.location.hash;
     document.getElementById("nama").innerHTML = nama;
 }
 
-function getLogin(){
+function getLogin() {
     return login;
 }
 
 //Logo DFB di klik
-function klikLogoDariFilm(){
+function klikLogoDariFilm() {
     var nama = window.location.hash.substr(5);
     window.location = "../Index.html#true" + nama;
+}
+
+function genre() {
+    if (window.location.hash) {
+        window.location = "genre.html#true" + window.location.hash.substr(5);
+    } else {
+        window.location = "genre.html";
+    }
+}
+
+function home() {
+    if (window.location.hash) {
+        window.location = "Index.html#true" + window.location.hash.substr(5);
+    }else{
+        window.location = "Index.html";
+    }
+
 }
 
 (jQuery)
