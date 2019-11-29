@@ -33,106 +33,6 @@
             text-align: center;
         }
     </style>
-
-    <script type="text/javascript">
-        function download4K() {
-            show();
-            var elem = document.getElementById("progress");
-            var width = 1;
-            var id = setInterval(frame, 30);
-            function frame() {
-                if (width >= 100) {
-                    clearInterval(id);
-                    hide();
-                }
-                else {
-                    width++;
-                    elem.style.width = width + '%';
-                    elem.innerHTML = width + '%'
-                }
-            }
-        }
-
-        function downloadBR() {
-            show();
-            var elem = document.getElementById("progress");
-            var width = 1;
-            var id = setInterval(frame, 20);
-            function frame() {
-                if (width >= 100) {
-                    clearInterval(id);
-                    hide();
-                }
-                else {
-                    width++;
-                    elem.style.width = width + '%';
-                    elem.innerHTML = width + '%'
-                }
-            }
-        }
-
-        function download1K() {
-            show();
-            var elem = document.getElementById("progress");
-            var width = 1;
-            var id = setInterval(frame, 10);
-            function frame() {
-                if (width >= 100) {
-                    clearInterval(id);
-                    hide();
-                }
-                else {
-                    width++;
-                    elem.style.width = width + '%';
-                    elem.innerHTML = width + '%'
-                }
-            }
-        }
-
-        function download780() {
-            show();
-            var elem = document.getElementById("progress");
-            var width = 1;
-            var id = setInterval(frame, 8);
-            function frame() {
-                if (width >= 100) {
-                    clearInterval(id);
-                    hide();
-                }
-                else {
-                    width++;
-                    elem.style.width = width + '%';
-                    elem.innerHTML = width + '%'
-                }
-            }
-        }
-
-        function download480() {
-            show();
-            var elem = document.getElementById("progress");
-            var width = 1;
-            var id = setInterval(frame, 5);
-            function frame() {
-                if (width >= 100) {
-                    clearInterval(id);
-                    hide();
-                }
-                else {
-                    width++;
-                    elem.style.width = width + '%';
-                    elem.innerHTML = width + '%'
-                }
-            }
-        }
-
-        function show() {
-            document.getElementById("myProgress").style.display = "block";
-        }
-
-        function hide() {
-            document.getElementById("myProgress").style.display = "none";
-        }
-    </script>
 </head>
 
 <body>
@@ -247,14 +147,14 @@
                         </li>
                         <li>
                             <a download="AStarIsBorn_780" href="../Video/John Wick 3.mp4">
-                                <button onclick="download780()">
+                                <button onclick="download720()">
                                     720p
                                 </button>
                             </a>
                         </li>
                         <li>
                             <a download="AStarIsBorn_480" href="../Video/John Wick 3.mp4">
-                                <button onclick="download1K()">
+                                <button onclick="download480()">
                                     480p
                                 </button>
                             </a>

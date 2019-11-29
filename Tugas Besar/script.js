@@ -199,6 +199,107 @@ function changePageFromIndex() {
     }
 };
 
+// download film
+function download4K() {
+    show();
+    var elem = document.getElementById("progress");
+    var width = 1;
+    var id = setInterval(frame, 40);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            hide();
+        }
+        else {
+            width++;
+            elem.style.width = width + '%';
+            elem.innerHTML = width + '%'
+        }
+    }
+}
+
+function downloadBR() {
+    show();
+    var elem = document.getElementById("progress");
+    var width = 1;
+    var id = setInterval(frame, 30);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            hide();
+        }
+        else {
+            width++;
+            elem.style.width = width + '%';
+            elem.innerHTML = width + '%'
+        }
+    }
+}
+
+function download1K() {
+    show();
+    var elem = document.getElementById("progress");
+    var width = 1;
+    var id = setInterval(frame, 20);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            hide();
+        }
+        else {
+            width++;
+            elem.style.width = width + '%';
+            elem.innerHTML = width + '%'
+        }
+    }
+}
+
+function download720() {
+    show();
+    var elem = document.getElementById("progress");
+    var width = 1;
+    var id = setInterval(frame, 15);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            hide();
+        }
+        else {
+            width++;
+            elem.style.width = width + '%';
+            elem.innerHTML = width + '%'
+        }
+    }
+}
+
+function download480() {
+    show();
+    var elem = document.getElementById("progress");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            hide();
+        }
+        else {
+            width++;
+            elem.style.width = width + '%';
+            elem.innerHTML = width + '%'
+        }
+    }
+}
+
+function show() {
+    document.getElementById("myProgress").style.display = "block";
+}
+
+function hide() {
+    document.getElementById("myProgress").style.display = "none";
+}
+
+
+
 //changePage from film to film
 function changePage() {
     var halaman = document.getElementById("myInput").value;
@@ -278,10 +379,13 @@ function genre() {
 function home() {
     if (window.location.hash) {
         window.location = "Index.html#true" + window.location.hash.substr(5);
-    }else{
+    } else {
         window.location = "Index.html";
     }
 
 }
+
+
+
 
 (jQuery)
