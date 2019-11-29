@@ -283,15 +283,6 @@
 </div>
 
 <body>
-	<script>
-		window.onload = function () {
-			if (window.location.hash == "#true") {
-				document.getElementById("beforeLogin").style.display = "none";
-				document.getElementById("afterLogin").style.display = "block";
-				document.getElementById('login').style.display = "none";
-			}
-		};
-	</script>
 	<header>
 		<div>
 			<div style="width: 20%; float: left; margin-right: 100px">
@@ -307,7 +298,7 @@
 		</div>
 
 		<div class="w3-display-topright" id="div_sign">
-			<div id="beforeLogin">
+			<div id="beforeLogin" style="display: none;">
 				<input type="button" id="btn_login" value="Log In"
 					style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
 					onclick="document.getElementById('login').style.display='block'">
@@ -324,7 +315,7 @@
 				</span>
 				<br>
 				<input type="button" id="btn_logout" value="Log out"
-					style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;" onclick="logout()">
+					style="float: right; font-size: 20px; border-radius: 10px;" onclick="logout()">
 
 			</div>
 
@@ -562,10 +553,10 @@
 		<!-- Containers untuk tabbed layout-->
 		<div class="tabs w3-padding w3-border" id="featured">
 			<!-- isi tabbed -->
-			<table style="margin-left: 80px;">
+			<table style="margin-left: 15px;">
 				<tr>
 					<td>
-						<a onclick="klikGambar('John Wick 3')">
+						<a onclick="klikGambar('John Wick 3')" style="cursor: pointer;">
 							<img src="images/JohnWick.png" alt="John Wick: Parabellum"
 								style="width: 257px; height: 300px; padding: 10px;" class="img">
 						</a>
@@ -670,7 +661,7 @@
 		</div>
 
 		<div class="tabs w3-padding w3-border" id="newRelease" style="display: none">
-			<table style="margin-left: 90px;">
+			<table style="margin-left: 15px;">
 				<tr>
 					<td>
 						<a href="Film/Man In Black.html">
@@ -729,7 +720,7 @@
 		</div>
 
 		<div class="tabs w3-padding w3-border" id="topView" style="display: none; width: 100%">
-			<table style="margin-left: 90px;">
+			<table style="margin-left: 15px;">
 				<tr>
 					<td>
 						<a href="Film/Avengers Endgame.html">
@@ -832,5 +823,23 @@
 	</footer>
 </body>
 <script type="text/javascript" src="script.js"></script>
+
+<script>
+	window.onload = function () {
+		var getTrue = window.location.hash.substr(1,4);
+		if(window.location.hash){
+			var getUsername = window.location.hash;
+			var username = getUsername.substr(5);
+			document.getElementById("beforeLogin").style.display = "none";
+			document.getElementById("afterLogin").style.display = "block";
+			document.getElementById('login').style.display = "none";
+			document.getElementById('nama').innerHTML = username;
+		}else{
+			console.log("before login");
+			document.getElementById("beforeLogin").style.display = "block";
+			document.getElementById("afterLogin").style.display = "none";
+		}
+	};
+</script>
 
 </html>

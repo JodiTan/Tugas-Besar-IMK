@@ -207,9 +207,10 @@ function changePage() {
 
 //klik film dari index
 function klikGambar(id) {
-    var username = document.getElementById("in_user").value;
-    if (window.location.hash == "#true" || login == true) {
-        window.location = "Film/" + id + ".html#" + username;
+    var nama = window.location.hash.substr(5);
+    alert(nama);
+    if (window.location.hash) {
+        window.location = "Film/" + id + ".html#true" + nama;
     } else {
         // alert(window.location.hash);
         alert("You need to login first")
@@ -223,8 +224,7 @@ function signin() {
     var password = document.getElementById("in_pass").value;
     if (username != "" && password != "") {
         login = true;
-        window.location.hash = true;
-        alert(window.location.hash);
+        window.location.hash = true + username;
         document.getElementById("beforeLogin").style.display = "none";
         document.getElementById("afterLogin").style.display = "block";
         document.getElementById("nama").innerHTML = username;
@@ -235,6 +235,7 @@ function signin() {
 //logout
 function logout() {
     window.location.hash = "";
+    window.location = "../Index.html";
     document.getElementById("beforeLogin").style.display = "block";
     document.getElementById("afterLogin").style.display = "none";
     document.getElementById("nama").innerHTML = "";
@@ -243,13 +244,24 @@ function logout() {
 
 //from film to index
 function setHash(){
-    document.location = "../Index.html#true";
+    var nama = window.location.hash.substr(5);
+    document.location = "../Index.html#true" + nama;
 }
 
 //set nama di Film
 function setNama(){
     var nama = window.location.hash;
     document.getElementById("nama").innerHTML = nama;
+}
+
+function getLogin(){
+    return login;
+}
+
+//Logo DFB di klik
+function klikLogoDariFilm(){
+    var nama = window.location.hash.substr(5);
+    window.location = "../Index.html#true" + nama;
 }
 
 (jQuery)
