@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    f
+
+    <!-- download to drive -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <style>
         ul {
             list-style-type: none;
@@ -34,6 +36,106 @@
             text-align: center;
         }
     </style>
+
+    <script type="text/javascript">
+        function download4K() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 30);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function downloadBR() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 20);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download1K() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download780() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 8);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function download480() {
+            show();
+            var elem = document.getElementById("progress");
+            var width = 1;
+            var id = setInterval(frame, 5);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    hide();
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + '%'
+                }
+            }
+        }
+
+        function show() {
+            document.getElementById("myProgress").style.display = "block";
+        }
+
+        function hide() {
+            document.getElementById("myProgress").style.display = "none";
+        }
+    </script>
 </head>
 
 <body>
@@ -70,8 +172,6 @@
                         style="float: right; font-size: 20px; margin: 5px; border-radius: 10px; color: black;"
                         onclick="logout()">
                 </a>
-
-
             </div>
         </div>
         <!-- search -->
@@ -135,35 +235,35 @@
                 <td style="font-size: 20px;">
                     <ul>
                         <li>
-                            <a href="../Video/John Wick 3.mp4" download="JohnWick3_4K">
+                            <a href="../Video/John Wick 3.mp4" download="John Wick 3_4K">
                                 <button onclick="download4K()">
                                     4K
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a href="../Video/John Wick 3.mp4" download="JohnWick3_BR">
+                            <a href="../Video/John Wick 3.mp4" download="John Wick 3_BR">
                                 <button onclick="downloadBR()">
                                     BlueRay
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a href="../Video/John Wick 3.mp4" download="JohnWick3_1080">
+                            <a href="../Video/John Wick 3.mp4" download="John Wick 3_1K">
                                 <button onclick="download1K()">
                                     1080p
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a href="../Video/John Wick 3.mp4" download="JohnWick3_720">
-                                <button onclick="download720()">
+                            <a href="../Video/John Wick 3.mp4" download="John Wick 3_720">
+                                <button onclick="downloadp()">
                                     720p
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a href="../Video/John Wick 3.mp4" download="JohnWick3_480">
+                            <a href="../Video/John Wick 3.mp4" download="John Wick 3_4K">
                                 <button onclick="download480()">
                                     480p
                                 </button>

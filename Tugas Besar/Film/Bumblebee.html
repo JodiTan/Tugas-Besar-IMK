@@ -155,13 +155,21 @@
             </div>
         </div>
 
-        <div class="w3-display-topright ;">
-            <h3 style="margin-right: 30px;">Welcome, User!</h3>
-            <a href="../index.html">
-                <button class="sign" style="margin-left: 40px;">
-                    Log Out
-                </button>
-            </a>
+        <div class="w3-display-topright ;" style="margin: 10px;">
+            <div style="font-size: 24px;">
+                <span>
+                    Welcome,
+                </span>
+                <span id="namaDiFilm">
+
+                </span>
+                <br>
+                <a href="../Index.html">
+                    <input type="button" id="btn_logout" value="Log out"
+                        style="float: right; font-size: 20px; margin: 5px; border-radius: 10px; color: black;"
+                        onclick="logout()">
+                </a>
+            </div>
         </div>
         <!-- search -->
         <div id="div_search" style="float: right; padding-top: 110px; padding-right: 10px;">
@@ -183,14 +191,14 @@
         <a href="../Index.html" style="color: white;">
             Home
         </a>
-        >> The Imitation Game
+        >> Bumblebee
     </div>
 
     <div style="margin-left: 150px; padding-top: 50px; width: 80%; align-content: center;">
         <table>
             <tr>
                 <td rowspan="3" style="content: none;">
-                    <img src="../images/TheImitationGame.png" style="width: 300px; height: 350px;">
+                    <img src="../images/BumbleBee.jpg" style="width: 300px; height: 350px;">
                 </td>
                 <td style="margin-left: -50px;">
                     <h2 class="w3-blue" style="padding: 10px;">
@@ -199,7 +207,7 @@
                 </td>
                 <td>
                     <h2 class="w3-blue" style="padding: 10px;">
-                        The Imitation Game
+                        Bumblebee
                     </h2>
                 </td>
             </tr>
@@ -226,36 +234,36 @@
                 <td style="font-size: 20px;">
                     <ul>
                         <li>
-                            <a href="../Video/John Wick 3.mp4" download="TheImitationGame_4K">
+                            <a href="../Video/John Wick 3.mp4" download="Bumblebee_4K">
                                 <button onclick="download4K()">
                                     4K
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="TheImitationGame_BlueRay" href="../Video/John Wick 3.mp4">
+                            <a download="Bumblebee_BlueRay" href="../Video/John Wick 3.mp4">
                                 <button onclick="downloadBR()">
                                     BlueRay
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="TheImitationGame_1080" href="../Video/John Wick 3.mp4">
+                            <a download="Bumblebee_1080" href="../Video/John Wick 3.mp4">
                                 <button onclick="download1K()">
                                     1080p
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="TheImitationGame_780" href="../Video/John Wick 3.mp4">
-                                <button onclick="download780()">
+                            <a download="Bumblebee_720" href="../Video/John Wick 3.mp4">
+                                <button onclick="download720()">
                                     720p
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="TheImitationGame_480" href="../Video/John Wick 3.mp4">
-                                <button onclick="download1K()">
+                            <a download="Bumblebee_480" href="../Video/John Wick 3.mp4">
+                                <button onclick="download480()">
                                     480p
                                 </button>
                             </a>

@@ -55,13 +55,21 @@
             </div>
         </div>
 
-        <div class="w3-display-topright ;">
-            <h3 style="margin-right: 30px;">Welcome, User!</h3>
-            <a href="../index.html">
-                <button class="sign" style="margin-left: 40px;">
-                    Log Out
-                </button>
-            </a>
+        <div class="w3-display-topright ;" style="margin: 10px;">
+            <div style="font-size: 24px;">
+                <span>
+                    Welcome,
+                </span>
+                <span id="namaDiFilm">
+
+                </span>
+                <br>
+                <a href="../Index.html">
+                    <input type="button" id="btn_logout" value="Log out"
+                        style="float: right; font-size: 20px; margin: 5px; border-radius: 10px; color: black;"
+                        onclick="logout()">
+                </a>
+            </div>
         </div>
 
         <!-- search -->
@@ -82,7 +90,7 @@
 
 
     <div class="w3-bar w3-blue" style="padding: 20px;">
-        <a href="../Index.html" style="color: white;">
+        <a style="color: white;" onclick="setHash()">
             Home
         </a>
         >> 2012
@@ -149,8 +157,8 @@
                             </a>
                         </li>
                         <li>
-                            <a download="2012_780" href="../Video/John Wick 3.mp4">
-                                <button onclick="download780()">
+                            <a download="2012_720" href="../Video/John Wick 3.mp4">
+                                <button onclick="download720()">
                                     720p
                                 </button>
                             </a>
@@ -184,5 +192,11 @@
     </div>
 </body>
 <script type="text/javascript" src="../script.js"></script>
+<script>
+    window.onload = function () {
+        var username = window.location.hash.substr(5);
+        document.getElementById("namaDiFilm").innerHTML = username;
+    }
+</script>
 
 </html>
