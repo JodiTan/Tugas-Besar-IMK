@@ -570,21 +570,21 @@
 					</td>
 
 					<td>
-						<a href="Film/2012.html">
+						<a onclick="klikGambar('2012')">
 							<img src="images/2012.png" alt="2012" style="width:  257px; height: 300px; padding: 10px;"
 								class="img">
 						</a>
 					</td>
 
 					<td>
-						<a href="Film/A Star Is Born.html">
+						<a onclick="klikGambar('A Star Is Born')">
 							<img src="images/AStarIsBorn.png" alt="A Star Is Born"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
 
 					<td>
-						<a href="Film/Man In Black.html">
+						<a onclick="klikGambar('Man In Black')">
 							<img src="images/ManInBlack.png" alt="Man In Black"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>
@@ -826,15 +826,15 @@
 
 <script>
 	window.onload = function () {
-		var getTrue = window.location.hash.substr(1,4);
-		if(window.location.hash){
+		var getTrue = window.location.hash.substr(1, 4);
+		if (window.location.hash) {
 			var getUsername = window.location.hash;
 			var username = getUsername.substr(5);
 			document.getElementById("beforeLogin").style.display = "none";
 			document.getElementById("afterLogin").style.display = "block";
 			document.getElementById('login').style.display = "none";
 			document.getElementById('nama').innerHTML = username;
-		}else{
+		} else {
 			console.log("before login");
 			document.getElementById("beforeLogin").style.display = "block";
 			document.getElementById("afterLogin").style.display = "none";

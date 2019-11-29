@@ -208,7 +208,6 @@ function changePage() {
 //klik film dari index
 function klikGambar(id) {
     var nama = window.location.hash.substr(5);
-    alert(nama);
     if (window.location.hash) {
         window.location = "Film/" + id + ".html#true" + nama;
     } else {

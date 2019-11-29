@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- download to drive -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <style>
         ul {
             list-style-type: none;
@@ -166,9 +169,10 @@
                 <br>
                 <a href="../Index.html">
                     <input type="button" id="btn_logout" value="Log out"
-                    style="float: right; font-size: 20px; margin: 5px; border-radius: 10px; color: black;" onclick="logout()">
+                        style="float: right; font-size: 20px; margin: 5px; border-radius: 10px; color: black;"
+                        onclick="logout()">
                 </a>
-                
+
 
             </div>
         </div>
@@ -231,37 +235,53 @@
                     </h2>
                 </td>
                 <td style="font-size: 20px;">
+                    <div >
+                        <button class="g-savetodrive" data-src="../images/2012.png"
+                        data-filename="John Wick 3.mp4" data-sitename="Download Film Baru" value="4K">
+                            4K
+                        </button>
+                    </div>
                     <ul>
                         <li>
-                            <a download="JohnWick3_4K" href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download" target="_blank">
+                            <a download="JohnWick3_4K"
+                                href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download"
+                                target="_blank">
                                 <button>
                                     4K
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="JohnWick3_BlueRay" href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download" target="_blank">
+                            <a download="JohnWick3_BlueRay"
+                                href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download"
+                                target="_blank">
                                 <button>
                                     BlueRay
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="JohnWick3_1080" href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download" target="_blank">
+                            <a download="JohnWick3_1080"
+                                href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download"
+                                target="_blank">
                                 <button>
                                     1080p
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="JohnWick3_780" href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download" target="_blank">
+                            <a download="JohnWick3_780"
+                                href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download"
+                                target="_blank">
                                 <button>
                                     720p
                                 </button>
                             </a>
                         </li>
                         <li>
-                            <a download="JohnWick3_480" href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download" target="_blank">
+                            <a download="JohnWick3_480"
+                                href="https://drive.google.com/uc?id=1AvYz8v1lacwhyhUIdf7DmCp4aK7G5u6g&export=download"
+                                target="_blank">
                                 <button>
                                     480p
                                 </button>
@@ -347,7 +367,7 @@
 </body>
 <script type="text/javascript" src="../script.js"></script>
 <script>
-    window.onload = function(){
+    window.onload = function () {
         var username = window.location.hash.substr(5);
         document.getElementById("namaDiFilm").innerHTML = username;
     }
