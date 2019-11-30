@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- modal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         a {
             text-decoration: none;
@@ -17,13 +21,49 @@
         }
     </style>
 
+    <script>
+        //login
+        $(document).ready(function () {
+            $(document.getElementById('btn_login')).click(function () {
+                $(document.getElementById('login1')).animate({
+                    top: '400px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $(document.getElementById('login_close')).click(function () {
+                $(document.getElementById('login1')).animate({
+                    top: '-400px'
+                });
+            });
+        });
+
+        //sign up
+        $(document).ready(function () {
+            $(document.getElementById('btn_signup')).click(function () {
+                $(document.getElementById('signup1')).animate({
+                    top: '500px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $(document.getElementById('close_signup')).click(function () {
+                $(document.getElementById('signup1')).animate({
+                    top: '-500px'
+                });
+            });
+        });
+    </script>
+
 </head>
 
 <body>
     <header id="header">
         <div>
             <div style="width: 20%; float: left; margin-right: 100px">
-                <a href="index.html">
+                <a onclick="klikLogo()">
                     <img src="images/logoDFB.jpeg" id="logo">
                 </a>
             </div>
@@ -82,6 +122,119 @@
         </div>
     </header>
 
+    <div id="signup" class="w3-modal">
+        <div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center;  margin-top: -500px"
+            id="signup1">
+            <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright"
+                id="close_signup">
+                &times;
+            </span>
+            <b>Sign Up</b>
+            <br>
+            <br>
+            <form>
+                <table style="margin: auto;">
+                    <tr>
+                        <th>
+                            Username
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="text" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            E-mail
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="email" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Password
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="password" required="">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <input type="checkbox"> I already agree to the <a href="#" style="color: blue">Terms and Conditions</a>
+                <br>
+                <table style="margin: auto;">
+                    <tr>
+                        <td>
+                            <input type="text" style="width: 50%;" required="">
+                        </td>
+                        <td>
+                            <span>
+                                Captcha
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <span onclick="document.getElementById('signup').style.display='none'" class="w3-display-middlebottom"
+                    id="close_signup">
+                    <input type="submit" value="Sign Up">
+                </span>
+            </form>
+            <br>
+        </div>
+    </div>
+
+    <div class="w3-modal" id="login">
+        <!--  margin-top: -400px -->
+        <div class="w3-modal-content" style="color: black; font-size: 24px; text-align: center; margin-top: -400px"
+            id="login1">
+            <span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-display-topright"
+                id="login_close">
+                &times;
+            </span>
+            <b>Sign In</b>
+            <br>
+            <br>
+            <form id="login">
+                <table style="margin: auto;">
+                    <tr>
+                        <th>
+                            Username / E-mail
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type=" text" id="in_user" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Password
+                        </th>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="password" id="in_pass" required="">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="Sign In" style="margin: 20px" onclick="signin()">
+            </form>
+        </div>
+    </div>
+
 
     <div class="w3-container" style="font-size: 24px;" id="genre">
         <h2 class="w3-border-bottom">Genre</h2>
@@ -89,36 +242,35 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('action')"
                     style="width:100%; text-align: left;">Action</button>
-                <table id="action" style="display:none; margin-left: 100px;">
+                <table id="action" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/2012.html">
+                            <a onclick="klikGambar('2012')" style="cursor: pointer;">
                                 <img src="images/2012.png" alt="2012"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Armageddon.html">
+                            <a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
                                 <img src="images/Armageddon.png" alt="Armageddon"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Avatar (2009).html">
-                                <img src="images/Avatar.png" alt="Avatar (2009)"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
+                                <img src="images/Avatar.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Avengers End Game.html">
-                                <img src="images/AvengersEndgame.png" alt="Avengers: Endgame"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="">
+                            <a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
+                                <img src="images/AvengersEndgame.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Batman The Dark Knight.html">
-                                <img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Batman The Dark Knight')" style="cursor: pointer;">
+                                <img src="images/BatmanTheDarkKnight.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                     </tr>
@@ -144,36 +296,35 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('adventure')"
                     style="width:100%; text-align: left;">Adventure</button>
-                <table id="adventure" style="display:none; margin-left: 100px;">
+                <table id="adventure" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/2012.html">
+                            <a onclick="klikGambar('2012')" style="cursor: pointer;">
                                 <img src="images/2012.png" alt="2012"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Armageddon.html">
+                            <a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
                                 <img src="images/Armageddon.png" alt="Armageddon"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Avatar (2009).html">
-                                <img src="images/Avatar.png" alt="Avatar (2009)"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
+                                <img src="images/Avatar.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Avengers End Game.html">
-                                <img src="images/AvengersEndgame.png" alt="Avengers: Endgame"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="">
+                            <a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
+                                <img src="images/AvengersEndgame.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Batman The Dark Knight.html">
-                                <img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Batman The Dark Knight')" style="cursor: pointer;">
+                                <img src="images/BatmanTheDarkKnight.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                     </tr>
@@ -199,31 +350,30 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Biography')"
                     style="width:100%; text-align: left;">Biography</button>
-                <table id="Biography" style="display:none; margin-left: 100px;">
+                <table id="Biography" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Beautiful Mind.html">
-                                <img src="images/ABeautifulMind.png" alt="A Beautiful Mind"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('A Beautiful Mind')" style="cursor: pointer;">
+                                <img src="images/ABeautifulMind.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/The Imitation Game.html">
-                                <img src="images/TheImitationGame.png" alt="The Imitation Game"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('The Imitation Game')" style="cursor: pointer;">
+                                <img src="images/TheImitationGame.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                     </tr>
@@ -246,17 +396,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Buddy')"
                     style="width:100%; text-align: left;">Buddy</button>
-                <table id="Buddy" style="display:none; margin-left: 100px;">
+                <table id="Buddy" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -276,17 +426,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Comedy')"
                     style="width:100%; text-align: left;">Comedy</button>
-                <table id="Comedy" style="display:none; margin-left: 100px;">
+                <table id="Comedy" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -306,17 +456,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Costume drama')"
                     style="width:100%; text-align: left;">Costume Drama</button>
-                <table id="Costume drama" style="display:none; margin-left: 100px;">
+                <table id="Costume drama" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -335,23 +485,22 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Crime')"
                     style="width:100%; text-align: left;">Crime</button>
-                <table id="Crime" style="display:none; margin-left: 100px;">
+                <table id="Crime" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/Batman The Dark Knight.html">
-                                <img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Batman The Dark Knight')" style="cursor: pointer;">
+                                <img src="images/BatmanTheDarkKnight.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -373,29 +522,29 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Disaster')"
                     style="width:100%; text-align: left;">Disaster</button>
-                <table id="Disaster" style="display:none; margin-left: 100px;">
+                <table id="Disaster" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/2012.html">
+                            <a onclick="klikGambar('2012')" style="cursor: pointer;">
                                 <img src="images/2012.png" alt="2012"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Armageddon.html">
+                            <a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
                                 <img src="images/Armageddon.png" alt="Armageddon"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -420,36 +569,34 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Drama')"
                     style="width:100%; text-align: left;">Drama</button>
-                <table id="Drama" style="display:none; margin-left: 100px;">
+                <table id="Drama" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/2012.html">
+                            <a onclick="klikGambar('2012')" style="cursor: pointer;">
                                 <img src="images/2012.png" alt="2012"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Beautiful Mind.html">
-                                <img src="images/ABeautifulMind.png" alt="A Beautiful Mind"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('A Beautiful Mind')" style="cursor: pointer;">
+                                <img src="images/ABeautifulMind.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
-                                <img src="images/AStarIsBorn.png" alt="A Star is Born"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
+                                <img src="images/AStarIsBorn.png" alt="A Star Is Born"
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Batman The Dark Knight.html">
-                                <img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Batman The Dark Knight')" style="cursor: pointer;">
+                                <img src="images/BatmanTheDarkKnight.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/The Imitation Game.html">
-                                <img src="images/TheImitationGame.png" alt="The Imitation Game"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('The Imitation Game')" style="cursor: pointer;">
+                                <img src="images/TheImitationGame.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                     </tr>
@@ -477,17 +624,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Family')"
                     style="width:100%; text-align: left;">Family</button>
-                <table id="Family" style="display:none; margin-left: 100px;">
+                <table id="Family" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -506,29 +653,29 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Fantasy')"
                     style="width:100%; text-align: left;">Fantasy</button>
-                <table id="Fantasy" style="display:none; margin-left: 100px;">
+                <table id="Fantasy" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/Avatar (2009).html">
-                                <img src="images/Avatar.png" alt="Avatar (2009)"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
+                                <img src="images/Avatar.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Avengers End Game.html">
-                                <img src="images/AvengersEndgame.png" alt="Avengers: Endgame"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="">
+                            <a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
+                                <img src="images/AvengersEndgame.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -553,17 +700,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Historical fiction')"
                     style="width:100%; text-align: left;">Historical-Fiction</button>
-                <table id="Historical fiction" style="display:none; margin-left: 100px;">
+                <table id="Historical fiction" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -582,25 +729,24 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('History')"
                     style="width:100%; text-align: left;">History</button>
-                <table id="History" style="display:none; margin-left: 100px;">
+                <table id="History" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/The Imitation Game.html">
-                                <img src="images/TheImitationGame.png" alt="The Imitation Game"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('The Imitation Game')" style="cursor: pointer;">
+                                <img src="images/TheImitationGame.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                     </tr>
@@ -620,7 +766,7 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Horror')"
                     style="width:100%; text-align: left;">Horror</button>
-                <table id="Horror" style="display:none; margin-left: 100px;">
+                <table id="Horror" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
                             <a href="Film/Annabelle.html">
@@ -629,14 +775,14 @@
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -655,17 +801,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Music')"
                     style="width:100%; text-align: left;">Music</button>
-                <table id="Music" style="display:none; margin-left: 100px;">
+                <table id="Music" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -684,17 +830,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Musical')"
                     style="width:100%; text-align: left;">Musical</button>
-                <table id="Musical" style="display:none; margin-left: 100px;">
+                <table id="Musical" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -713,17 +859,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Melodrama')"
                     style="width:100%; text-align: left;">Melodrama</button>
-                <table id="Melodrama" style="display:none; margin-left: 100px;">
+                <table id="Melodrama" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -742,7 +888,7 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Mystery')"
                     style="width:100%; text-align: left;">Mystery</button>
-                <table id="Mystery" style="display:none; margin-left: 100px;">
+                <table id="Mystery" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
                             <a href="Film/Annabelle.html">
@@ -751,14 +897,14 @@
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -777,23 +923,22 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Neo-Noir')"
                     style="width:100%; text-align: left;">Neo-Noir</button>
-                <table id="Neo-Noir" style="display:none; margin-left: 100px;">
+                <table id="Neo-Noir" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/Batman The Dark Knight.html">
-                                <img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Batman The Dark Knight')" style="cursor: pointer;">
+                                <img src="images/BatmanTheDarkKnight.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -817,23 +962,22 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Noir')"
                     style="width:100%; text-align: left;">Noir</button>
-                <table id="Noir" style="display:none; margin-left: 100px;">
+                <table id="Noir" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/Batman The Dark Knight.html">
-                                <img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Batman The Dark Knight')" style="cursor: pointer;">
+                                <img src="images/BatmanTheDarkKnight.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -855,25 +999,24 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Romance')"
                     style="width:100%; text-align: left;">Romance</button>
-                <table id="Romance" style="display:none; margin-left: 100px;">
+                <table id="Romance" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/The Imitation Game.html">
-                                <img src="images/TheImitationGame.png" alt="The Imitation Game"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('The Imitation Game')" style="cursor: pointer;">
+                                <img src="images/TheImitationGame.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                     </tr>
@@ -893,30 +1036,30 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Science fiction')"
                     style="width:100%; text-align: left;">Science-Fiction</button>
-                <table id="Science fiction" style="display:none; margin-left: 100px;">
+                <table id="Science fiction" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/2012.html">
+                            <a onclick="klikGambar('2012')" style="cursor: pointer;">
                                 <img src="images/2012.png" alt="2012"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Armageddon.html">
+                            <a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
                                 <img src="images/Armageddon.png" alt="Armageddon"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Avatar (2009).html">
-                                <img src="images/Avatar.png" alt="Avatar (2009)"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
+                                <img src="images/Avatar.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Avengers End Game.html">
-                                <img src="images/AvengersEndgame.png" alt="Avengers: Endgame"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="">
+                            <a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
+                                <img src="images/AvengersEndgame.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                     </tr>
@@ -939,17 +1082,17 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Spy')"
                     style="width:100%; text-align: left;">Spy</button>
-                <table id="Spy" style="display:none; margin-left: 100px;">
+                <table id="Spy" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -968,29 +1111,28 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Superhero')"
                     style="width:100%; text-align: left;">Superhero</button>
-                <table id="Superhero" style="display:none; margin-left: 100px;">
+                <table id="Superhero" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/Avengers End Game.html">
-                                <img src="images/AvengersEndgame.png" alt="Avengers: Endgame"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="">
+                            <a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
+                                <img src="images/AvengersEndgame.png" alt="Avatar"
+                                    style="width: 257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Batman The Dark Knight.html">
-                                <img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Batman The Dark Knight')" style="cursor: pointer;">
+                                <img src="images/BatmanTheDarkKnight.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -1015,7 +1157,7 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Supernatural')"
                     style="width:100%; text-align: left;">Supernatural</button>
-                <table id="Supernatural" style="display:none; margin-left: 100px;">
+                <table id="Supernatural" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
                             <a href="Film/Annabelle.html">
@@ -1024,14 +1166,14 @@
                             </a>
                         </td>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
@@ -1050,12 +1192,12 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('Thriller')"
                     style="width:100%; text-align: left;">Thriller</button>
-                <table id="Thriller" style="display:none; margin-left: 100px;">
+                <table id="Thriller" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/2012.html">
+                            <a onclick="klikGambar('2012')" style="cursor: pointer;">
                                 <img src="images/2012.png" alt="2012"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
@@ -1065,15 +1207,14 @@
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Armageddon.html">
+                            <a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
                                 <img src="images/Armageddon.png" alt="Armageddon"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                                    style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/Batman The Dark Knight.html">
-                                <img src="images/BatmanTheDarkKnight.png" alt="Batman: The Dark Knight"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('Batman The Dark Knight')" style="cursor: pointer;">
+                                <img src="images/BatmanTheDarkKnight.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                     </tr>
@@ -1096,25 +1237,24 @@
             <div>
                 <button class="w3-button w3-bar-item w3-blue tablink" onclick="showCont('War')"
                     style="width:100%; text-align: left;">War</button>
-                <table id="War" style="display:none; margin-left: 100px;">
+                <table id="War" style="display:none; margin-left: 15px;">
                     <tr>
                         <td>
-                            <a href="Film/A Star Is Born.html">
+                            <a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
                                 <img src="images/AStarIsBorn.png" alt="A Star Is Born"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
 
                         <td>
-                            <a href="Film/Man In Black.html">
+                            <a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
                                 <img src="images/ManInBlack.png" alt="Man In Black"
                                     style="width:  257px; height: 300px; padding: 10px;" class="img">
                             </a>
                         </td>
                         <td>
-                            <a href="Film/The Imitation Game.html">
-                                <img src="images/TheImitationGame.png" alt="The Imitation Game"
-                                    style="width: 250px; height: 300px; padding: 10px;" class="img">
+                            <a onclick="klikGambar('The Imitation Game')" style="cursor: pointer;">
+                                <img src="images/TheImitationGame.png" style="width: 220px; height: 250px;">
                             </a>
                         </td>
                     </tr>

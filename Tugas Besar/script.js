@@ -36,6 +36,7 @@ function nextPage(obj, idContentContainer, id) {
 
 function showCont(id) {
     var x = document.getElementById(id);
+    var tab = document.getElementsByClassName("tablink");
 
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
@@ -366,6 +367,14 @@ function getLogin() {
 function klikLogoDariFilm() {
     var nama = window.location.hash.substr(5);
     window.location = "../Index.html#true" + nama;
+}
+
+function klikLogo() {
+    if (window.location.hash) {
+        window.location = "Index.html#true" + window.location.hash.substr(5);
+    } else {
+        window.location = "Index.html";
+    }
 }
 
 function genre() {

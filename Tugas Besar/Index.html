@@ -286,7 +286,7 @@
 	<header>
 		<div>
 			<div style="width: 20%; float: left; margin-right: 100px">
-				<a href="index.html">
+				<a onclick="klikLogo()" style="cursor: pointer;">
 					<img src="images/logoDFB.jpeg" id="logo">
 				</a>
 			</div>
@@ -351,7 +351,7 @@
 							:
 						</td>
 						<td>
-							<input type="text">
+							<input type="text" required="">
 						</td>
 					</tr>
 					<tr>
@@ -362,7 +362,7 @@
 							:
 						</td>
 						<td>
-							<input type="email">
+							<input type="email" required="">
 						</td>
 					</tr>
 					<tr>
@@ -373,17 +373,18 @@
 							:
 						</td>
 						<td>
-							<input type="password">
+							<input type="password" required="">
 						</td>
 					</tr>
 				</table>
 				<br>
-				<input type="checkbox"> I already agree to the <a href="#" style="color: blue">Terms and Conditions</a>
+				<input type="checkbox" required=""> I already agree to the <a href="#" style="color: blue">Terms and
+					Conditions</a>
 				<br>
 				<table style="margin: auto;">
 					<tr>
 						<td>
-							<input type="text" style="width: 50%;">
+							<input type="text" style="width: 50%;" required="">
 						</td>
 						<td>
 							<span>
@@ -393,10 +394,7 @@
 					</tr>
 				</table>
 				<br>
-				<span onclick="document.getElementById('signup').style.display='none'" class="w3-display-middlebottom"
-					id="close_signup">
-					<input type="submit" value="Sign Up">
-				</span>
+				<input type="submit" value="Sign Up">
 			</form>
 			<br>
 		</div>
@@ -423,7 +421,7 @@
 							:
 						</td>
 						<td>
-							<input type=" text" id="in_user" required="">
+							<input type="text" id="in_user" required="">
 						</td>
 					</tr>
 					<tr>
@@ -729,8 +727,8 @@
 						</a>
 					</td>
 					<td>
-						<a href="Film/Avengers Infinity War.html">
-							<img src="images/AvengersInfinityWar.png" alt="Avengers Infinity War"
+						<a onclick="klikGambar('Avengers Infinity War')" style="cursor: pointer;">
+							<img src="images/AvengersInfinityWar.png" alt=" Avengers Infinity War"
 								style="width: 257px; height: 300px; padding: 10px;" class="img">
 						</a>
 					</td>
@@ -750,7 +748,7 @@
 					</td>
 
 					<td>
-						<a href="Film/Armageddon.html">
+						<a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
 							<img src="images/Armageddon.png" alt="Armageddon"
 								style="width:  257px; height: 300px; padding: 10px;" class="img">
 						</a>

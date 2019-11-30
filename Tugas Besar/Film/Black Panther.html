@@ -287,5 +287,11 @@
     </div>
 </body>
 <script type="text/javascript" src="../script.js"></script>
+<script>
+    window.onload = function () {
+        var username = window.location.hash.substr(5);
+        document.getElementById("namaDiFilm").innerHTML = username;
+    }
+</script>
 
 </html>
