@@ -546,9 +546,11 @@
 					Release</button>
 				<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'topView')">Recommended This
 					Week</button>
+				<button class="w3-button w3-bar-item tablink" onclick="openContent(this, 'comment')">Request for
+					Film</button>
 			</div>
 		</div>
-		<!-- Containers untuk tabbed layout-->
+		<!-- Containers untuk tabbed layout -->
 		<div class="tabs w3-padding w3-border" id="featured">
 			<!-- isi tabbed -->
 			<table style="margin-left: 15px;">
@@ -773,6 +775,26 @@
 					</th>
 				</tr>
 			</table>
+		</div>
+		<div class="tabs w3-padding w3-border" id="comment" style="display: none;">
+			<script>
+				function doRequest() {
+					alert("Your request has been recorded");
+					document.getElementById("uname").innerHTML = "empty";
+					document.getElementById("title").innerHTML = "";
+				}
+			</script>
+			<form class="needs-validation" novalidate>
+				<div class="form-group">
+					<label for="email">Username:</label>
+					<input type="text" class="form-control" id="uname" placeholder="Enter Username">
+				</div>
+				<div class="form-group">
+					<label for="pwd">Film Title:</label>
+					<input type="text" class="form-control" id="title" placeholder="Enter Title">
+				</div>
+				<button type="button" class="btn btn-primary" onclick="doRequest()">Submit</button>
+			</form>
 		</div>
 	</div>
 	<footer>
