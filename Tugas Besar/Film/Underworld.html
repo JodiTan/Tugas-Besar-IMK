@@ -44,7 +44,7 @@
         </div>
         <div>
             <div style="width: 20%; float: left; margin-right: 100px">
-                <a href="../Index.html">
+                <a onclick="klikLogoDariFilm()" style="cursor: pointer;">
                     <img src="../images/logoDFB.jpeg" id="logo">
                 </a>
             </div>
@@ -55,13 +55,21 @@
             </div>
         </div>
 
-        <div class="w3-display-topright ;">
-            <h3 style="margin-right: 30px;">Welcome, User!</h3>
-            <a href="../index.html">
-                <button class="sign" style="margin-left: 40px;">
-                    Log Out
-                </button>
-            </a>
+        <div class="w3-display-topright ;" style="margin: 10px;">
+            <div style="font-size: 24px;">
+                <span>
+                    Welcome,
+                </span>
+                <span id="namaDiFilm">
+
+                </span>
+                <br>
+                <a href="../Index.html">
+                    <input type="button" id="btn_logout" value="Log out"
+                        style="float: right; font-size: 20px; margin: 5px; border-radius: 10px; color: black;"
+                        onclick="logout()">
+                </a>
+            </div>
         </div>
         <!-- search -->
         <div id="div_search" style="float: right; padding-top: 110px; padding-right: 10px;">
@@ -80,10 +88,10 @@
     </header>
 
     <div class="w3-bar w3-blue" style="padding: 20px;">
-        <a href="../Index.html" style="color: white;">
+        <a style="color: white; cursor: pointer;" onclick="setHash()">
             Home
         </a>
-        >> The Imitation Game
+        >> Underworld
     </div>
 
     <div style="margin-left: 150px; padding-top: 50px; width: 80%; align-content: center;">
