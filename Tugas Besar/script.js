@@ -70,8 +70,8 @@ function showCont(id) {
 };
 
 var films = ["2012", "A Beautiful Mind", "A Star is Born", "Annabelle", "Armageddon", "Avatar (2009)", "Avengers End Game", "Avengers Infinity War", "Barbie",
-    "Batman The Dark Knight", "Beauty and The Beast", "Black Panther", "Boss Baby", "Bruce Almighty", "Bumblebee", "Captain America: The First Avenger",
-    "Captain America: The Winter Soldier", "Cinderella", "Doctor Strange", "Dragon Ball", "Elysium", "Evan Almighty", "Extraterrestrial", "Fairy Tail",
+    "Batman The Dark Knight", "Beauty and The Beast", "Black Panther", "Boss Baby", "Bruce Almighty", "Bumblebee", "Captain America The First Avenger",
+    "Captain America The Winter Soldier", "Cinderella", "Doctor Strange", "Dragon Ball", "Elysium", "Evan Almighty", "Extraterrestrial", "Fairy Tail",
     "Fast and Furious 7", "Final Destination 3", "Final Fantasy The Movie", "Five Minarets in New York", "Frontera", "Garfield The Movie", "Ghost Rider",
     "God Must Be Crazy", "Gran Torino", "Gravity", "Guardians of the Galaxy", "Hachiko", "Harry Potter", "Hellboy", "Honeymoon", "Inception",
     "Incredible Hulk", "Insidious", "John Wick 3", "Johnny English Reborn", "Kill Bill 1", "Kill Bill 2", "Life of Pi", "Maleficent",
