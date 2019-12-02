@@ -36,38 +36,21 @@ function nextPage(obj, idContentContainer, id) {
 
 function showCont(id) {
     var x = document.getElementById(id);
-    var tab = document.getElementsByClassName("tablink");
+    var tab = document.getElementsByClassName("tableGenre");
+    if (x.style.display == "block") {
+        x.style.display = "none";
+    } else {
+        for (var i = 0; i < tab.length; i++) {
+            tab[i].style.display = "none";
+        }
+        // alert(x.style.display);
+        x.style.display = "block";
+    }
 
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    }
-    else {
-        x.className = x.className.replace(" w3-show", "");
-    }
+
+
+
 }
-
-+ function ($) {
-    'use strict';
-
-    var dropZone = document.getElementById('drop-zone');
-
-    dropZone.ondrop = function (e) {
-        e.preventDefault();
-        this.className = 'upload-drop-zone dropped';
-        $(this).html("File dropped");
-    }
-
-    dropZone.ondragover = function () {
-        this.className = 'upload-drop-zone drop';
-        return false;
-    }
-
-    dropZone.ondragleave = function () {
-        this.className = 'upload-drop-zone';
-        return false;
-    }
-
-};
 
 var films = ["2012", "A Beautiful Mind", "A Star is Born", "Annabelle", "Armageddon", "Avatar (2009)", "Avengers End Game", "Avengers Infinity War", "Barbie",
     "Batman The Dark Knight", "Beauty and The Beast", "Black Panther", "Boss Baby", "Bruce Almighty", "Bumblebee", "Captain America The First Avenger",
