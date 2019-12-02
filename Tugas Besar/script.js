@@ -394,8 +394,31 @@ function home() {
 
 }
 
+var captcha;
 
+function showSignUp() {
+    var a, b, c, d;
+    document.getElementById('signup').style.display = 'block';
 
+    a = Math.floor(Math.random() * 10);
+    b = Math.floor(Math.random() * 10);
+    c = Math.floor(Math.random() * 10);
+    d = Math.floor(Math.random() * 10);
+    document.getElementById("c1").innerHTML = a;
+    document.getElementById("c2").innerHTML = b;
+    document.getElementById("c3").innerHTML = c;
+    document.getElementById("c4").innerHTML = d;
+    captcha = a+""+b+""+c+""+d;
+}
 
+function cek(){
+    if(document.getElementById("inputCaptcha").value != captcha){
+        alert("Wrong Captcha");
+        document.getElementById("inputCaptcha").value = "";
+    }else{
+        document.getElementById("formSignUp").submit();
+    }
+
+}
 
 (jQuery)

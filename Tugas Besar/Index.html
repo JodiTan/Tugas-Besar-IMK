@@ -303,8 +303,7 @@
 					style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
 					onclick="document.getElementById('login').style.display='block'">
 				<input type="button" id="btn_signup" value="Sign Up"
-					style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;"
-					onclick="document.getElementById('signup').style.display='block'">
+					style="float: right; font-size: 23px; margin: 5px; border-radius: 10px;" onclick="showSignUp()">
 			</div>
 			<div id="afterLogin" style="display: none; font-size: 24px;">
 				<span>
@@ -341,7 +340,7 @@
 			<b>Sign Up</b>
 			<br>
 			<br>
-			<form>
+			<form id="formSignUp">
 				<table style="margin: auto;">
 					<tr>
 						<th>
@@ -381,20 +380,26 @@
 				<input type="checkbox" required=""> I already agree to the <a href="#" style="color: blue">Terms and
 					Conditions</a>
 				<br>
+				<br>
 				<table style="margin: auto;">
 					<tr>
 						<td>
-							<input type="text" style="width: 50%;" required="">
+							<input type="text" style="width: 50%;" required="" id="inputCaptcha">
 						</td>
-						<td>
-							<span>
-								Captcha
+						<td style="background-color: tomato; font-family: georgia; font-size:30px">
+							<span id="c1">
+							</span>
+							<span id="c2">
+							</span>
+							<span id="c3">
+							</span>
+							<span id="c4">
 							</span>
 						</td>
 					</tr>
 				</table>
 				<br>
-				<input type="submit" value="Sign Up">
+				<input type="button" value="Sign Up" onclick="cek()">
 			</form>
 			<br>
 		</div>
@@ -437,7 +442,7 @@
 					</tr>
 				</table>
 				<br>
-				<input type="submit" value="Sign In" style="margin: 20px" onclick="signin()">
+				<input type="button" value="Sign In" style="margin: 20px" onclick="signin()">
 			</form>
 		</div>
 	</div>
