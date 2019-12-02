@@ -98,7 +98,7 @@
                 </td>
                 <td>
                     <h2 class="w3-blue" style="padding: 10px;">
-                       Kill Bill 2
+                        Kill Bill 2
                     </h2>
                 </td>
             </tr>
@@ -180,5 +180,11 @@
     </div>
 </body>
 <script type="text/javascript" src="../script.js"></script>
+<script>
+    window.onload = function () {
+        var username = window.location.hash.substr(5);
+        document.getElementById("namaDiFilm").innerHTML = username;
+    }
+</script>
 
 </html>
