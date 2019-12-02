@@ -779,9 +779,9 @@
 		<div class="tabs w3-padding w3-border" id="comment" style="display: none;">
 			<script>
 				function doRequest() {
+					document.getElementById("uname").value = "";
+					document.getElementById("title").value = "";
 					alert("Your request has been recorded");
-					document.getElementById("uname").innerHTML = "empty";
-					document.getElementById("title").innerHTML = "";
 				}
 			</script>
 			<form class="needs-validation" novalidate>
