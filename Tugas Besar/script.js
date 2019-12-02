@@ -317,9 +317,7 @@ function klikGambar(id) {
     if (window.location.hash) {
         window.location = "Film/" + id + ".html#true" + nama;
     } else {
-        // alert(window.location.hash);
-        alert("You need to login first")
-        // alert(login);        
+        alert("You need to login first");
     }
 }
 
@@ -408,15 +406,26 @@ function showSignUp() {
     document.getElementById("c2").innerHTML = b;
     document.getElementById("c3").innerHTML = c;
     document.getElementById("c4").innerHTML = d;
-    captcha = a+""+b+""+c+""+d;
+    captcha = a + "" + b + "" + c + "" + d;
 }
 
-function cek(){
-    if(document.getElementById("inputCaptcha").value != captcha){
+function cek() {
+    if (document.getElementById("inputCaptcha").value != captcha) {
         alert("Wrong Captcha");
         document.getElementById("inputCaptcha").value = "";
-    }else{
+    } else {
         document.getElementById("formSignUp").submit();
+    }
+
+}
+
+function doRequest() {
+    if (window.location.hash) {
+        document.getElementById("uname").value = "";
+        document.getElementById("title").value = "";
+        alert("Your request has been recorded");
+    } else {
+        alert("You need to login first");
     }
 
 }
