@@ -448,10 +448,10 @@
 	</div>
 
 	<br>
-
+	<!-- Carousel -->
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-11 col-md-10 col-centered">
+			<div class="col-sm-12 col-centered">
 				<div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000">
 					<div class="carousel-inner">
 						<div class="item active">
@@ -538,306 +538,298 @@
 	</script>
 
 	<br>
-
-	<div class="w3-bar" style="font-size: 24px;">
-		<div class="w3-blue" style="text-align: center;">
-			<h2 style="text-align: center; font-size: 30px; ">
-				FEATURED MOVIES
-			</h2>
-			<div class="w3-bar w3-blue" style="text-align: center;">
-				<button class="w3-button w3-bar-item w3-grey tablink"
-					onclick="openContent(this,'featured')">Featured</button>
-				<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'newRelease')">New
-					Release</button>
-				<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'topView')">Recommended This
-					Week</button>
-				<button class="w3-button w3-bar-item tablink" onclick="openContent(this, 'comment')">Request for
-					Film</button>
+	<div class="container-fluid w3-blue">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="text-center">FEATURED MOVIES</h2>
 			</div>
 		</div>
-		<!-- Containers untuk tabbed layout -->
-		<div class="tabs w3-padding w3-border" id="featured">
-			<!-- isi tabbed -->
-			
-			<table style="margin-left: 15px;">
-				<tr>
-					<td>
-						<a onclick="klikGambar('John Wick 3')" style="cursor: pointer;">
-							<img src="images/JohnWick.png" alt="John Wick: Parabellum"
-								style="width: 257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('The Imitation Game')" style="cursor: pointer;">
-							<img src="images/TheImitationGame.png" alt="The Imitation Game"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('2012')" style="cursor: pointer;">
-							<img src="images/2012.png" alt="2012" style="width:  257px; height: 300px; padding: 10px;"
-								class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
-							<img src="images/AStarIsBorn.png" alt="A Star Is Born"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
-							<img src="images/ManInBlack.png" alt="Man In Black"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<th style="text-align: center;">
-						<h4><b>John Wick: Parabellum</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>The Imitation Game</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>2012</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>A Star is Born</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Man In Black</b></h4>
-					</th>
-				</tr>
-				<tr>
-					<td>
-						<a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
-							<img src="images/Avatar.png" alt="Avatar"
-								style="width: 257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-					<td>
-						<a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
-							<img src="images/Armageddon.png" alt="Armageddon"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('Captain America The First Avenger')" style="cursor: pointer;">
-							<img src="images/CaptainAmerica1.png" alt="Captain America 1"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-					<td>
-						<a onclick="klikGambar('Land Of Mine')" style="cursor: pointer;">
-							<img src="images/LandOfMine.jpg" alt="Land Of Mine"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-					<td>
-						<a onclick="klikGambar('The Theory Of Everything')" style="cursor: pointer;">
-							<img src="images/TheTheoryOfEverything.png" alt="The Theory Of Everything"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<th style="text-align: center;">
-						<h4><b>Avatar</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Armageddon</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Captain America 1</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Land Of Mine</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>The Theory Of Everything</b></h4>
-					</th>
-				</tr>
-			</table>
-		</div>
-
-		<div class="tabs w3-padding w3-border" id="newRelease" style="display: none">
-			<table style="margin-left: 15px;">
-				<tr>
-					<td>
-						<a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
-							<img src="images/ManInBlack.png" alt="Man In Black"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-					<td>
-						<a onclick="klikGambar('John Wick 3')" style="cursor: pointer;">
-							<img src="images/JohnWick.png" alt="John Wick 3"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
-							<img src="images/Avatar.png" alt="Avatar"
-								style="width: 257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('A Beautiful Mind')" style="cursor: pointer;">
-							<img src="images/ABeautifulMind.png" alt="Avatar"
-								style="width: 257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
-							<img src="images/AvengersEndgame.png" alt="Avatar"
-								style="width: 257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-
-				</tr>
-				<tr>
-					<th style="text-align: center;">
-						<h4><b>Man In Black</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>John Wick: Parabellum</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Avatar</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>A Beautiful Mind</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Avengers Endgame</b></h4>
-					</th>
-				</tr>
-			</table>
-		</div>
-
-		<div class="tabs w3-padding w3-border" id="topView" style="display: none; width: 100%">
-			<table style="margin-left: 15px;">
-				<tr>
-					<td>
-						<a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
-							<img src="images/AvengersEndgame.png" alt="Avatar"
-								style="width: 257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-					<td>
-						<a onclick="klikGambar('Avengers Infinity War')" style="cursor: pointer;">
-							<img src="images/AvengersInfinityWar.png" alt=" Avengers Infinity War"
-								style="width: 257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
-							<img src="images/ManInBlack.png" alt="Man In Black"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
-							<img src="images/Avatar.png" alt="Avatar"
-								style="width: 257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-					<td>
-						<a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
-							<img src="images/Armageddon.png" alt="Armageddon"
-								style="width:  257px; height: 300px; padding: 10px;" class="img">
-						</a>
-					</td>
-
-				</tr>
-				<tr>
-					<th style="text-align: center;">
-						<h4><b>Avengers End Game</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Avengers Infinity War</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Man In Black</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Avatar</b></h4>
-					</th>
-					<th style="text-align: center;">
-						<h4><b>Armageddon</b></h4>
-					</th>
-				</tr>
-			</table>
-		</div>
-		<div class="tabs w3-padding w3-border" id="comment" style="display: none;">
-			<form class="needs-validation" novalidate>
-				<div class="form-group">
-					<label for="email">Email</label>
-					<input type="email" class="form-control" id="uname" placeholder="Enter Email" required="">
-				</div>
-				<div class="form-group">
-					<label for="pwd">Film Title:</label>
-					<input type="text" class="form-control" id="title" placeholder="Enter Title" required="">
-				</div>
-				<button type="button" class="btn btn-primary" onclick="doRequest()">Submit</button>
-			</form>
+		<div class="row">
+			<div class="col-sm-3 text-center">
+				<button class="w3-button w3-bar-item w3-grey tablink" onclick="openContent(this,'featured')">
+					<h4>Featured</h4>
+				</button>
+			</div>
+			<div class="col-sm-3 text-center">
+				<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'newRelease')">
+					<h4>New Release</h4>
+				</button>
+			</div>
+			<div class="col-sm-3 text-center">
+				<button class="w3-button w3-bar-item tablink" onclick="openContent(this,'topView')">
+					<h4>Recommended This Week</h4>
+				</button>
+			</div>
+			<div class="col-sm-3 text-center">
+				<button class="w3-button w3-bar-item tablink" onclick="openContent(this, 'comment')">
+					<h4>Request for Film</h4>
+				</button>
+			</div>
 		</div>
 	</div>
-	<footer>
-		<div class="w3-container w3-blue" style="font-size: 24px; color: white;">
-			<div>
-				<h1 style="text-align: center;">
-					Design By :
-				</h1>
+	<!-- Containers untuk tabbed layout -->
+	<div class="tabs w3-padding w3-border" id="featured">
+		<!-- isi tabbed -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<a onclick="klikGambar('John Wick 3')" style="cursor: pointer;">
+						<img src="images/JohnWick.png" alt="John Wick: Parabellum"
+							style="width: 257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('The Imitation Game')" style="cursor: pointer;">
+						<img src="images/TheImitationGame.png" alt="The Imitation Game"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('2012')" style="cursor: pointer;">
+						<img src="images/2012.png" alt="2012" style="width:  257px; height: 300px; padding: 10px;"
+							class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('A Star Is Born')" style="cursor: pointer;">
+						<img src="images/AStarIsBorn.png" alt="A Star Is Born"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
+						<img src="images/ManInBlack.png" alt="Man In Black"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
 			</div>
-			<div>
-				<table style="width: 100%;">
-					<tr>
-						<td style="text-align: center;">
-							<img src="images/profile/IndraPermana.jpg">
-							<br><br>
-							<table style="width: 100%;">
-								<tr>
-									<td>Indra Permana Sugianto</td>
-								</tr>
-								<tr>
-									<td>2017730008</td>
-								</tr>
-							</table>
-						</td>
-						<td style="text-align: left;">
-							<img src="images/profile/JodiTanato.jpg">
-							<br>
-							<br>
-							<table style="width: 100%;">
-								<tr>
-									<td>
-										Jodi Tanato
-									</td>
-								</tr>
-								<tr>
-									<td>
-										2017730037
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<h5 class="text-center" style="margin-left: 40px;"><b>John Wick: Parabellum</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>The Imitation Game</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>2012</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>A Star is Born</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Man In Black</b></h5>
+				</div>
 			</div>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
+						<img src="images/Avatar.png" alt="Avatar" style="width: 257px; height: 300px; padding: 10px;"
+							class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
+						<img src="images/Armageddon.png" alt="Armageddon"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Captain America The First Avenger')" style="cursor: pointer;">
+						<img src="images/CaptainAmerica1.png" alt="Captain America 1"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Land Of Mine')" style="cursor: pointer;">
+						<img src="images/LandOfMine.jpg" alt="Land Of Mine"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('The Theory Of Everything')" style="cursor: pointer;">
+						<img src="images/TheTheoryOfEverything.png" alt="The Theory Of Everything"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Avatar (2009)</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Armageddon</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Captain America 1</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Land of Mine</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>The Theory of Everything</b></h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tabs w3-padding w3-border" id="newRelease" style="display: none">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
+						<img src="images/ManInBlack.png" alt="Man In Black"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('John Wick 3')" style="cursor: pointer;">
+						<img src="images/JohnWick.png" alt="John Wick 3"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
+						<img src="images/Avatar.png" alt="Avatar" style="width: 257px; height: 300px; padding: 10px;"
+							class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('A Beautiful Mind')" style="cursor: pointer;">
+						<img src="images/ABeautifulMind.png" alt="Avatar"
+							style="width: 257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
+						<img src="images/AvengersEndgame.png" alt="Avatar"
+							style="width: 257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Man In Black</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>John Wick: Parabellum</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Avatar (2009)</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>A Beautiful Mind</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Avangers: Endgame</b></h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tabs w3-padding w3-border" id="topView" style="display: none; width: 100%">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<a onclick="klikGambar('Avengers End Game')" style="cursor: pointer;">
+						<img src="images/AvengersEndgame.png" alt="Avatar"
+							style="width: 257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Avengers Infinity War')" style="cursor: pointer;">
+						<img src="images/AvengersInfinityWar.png" alt=" Avengers Infinity War"
+							style="width: 257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Man In Black')" style="cursor: pointer;">
+						<img src="images/ManInBlack.png" alt="Man In Black"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Avatar (2009)')" style="cursor: pointer;">
+						<img src="images/Avatar.png" alt="Avatar" style="width: 257px; height: 300px; padding: 10px;"
+							class="img">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a onclick="klikGambar('Armageddon')" style="cursor: pointer;">
+						<img src="images/Armageddon.png" alt="Armageddon"
+							style="width:  257px; height: 300px; padding: 10px;" class="img">
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Avengers: Endgame</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Avengers: Infinity War</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Man In Black</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Avatar (2009)</b></h5>
+				</div>
+				<div class="col-sm-2">
+					<h5 class="text-center" style="margin-left: 40px;"><b>Armageddon</b></h5>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="tabs w3-padding w3-border" id="comment" style="display: none;">
+		<form class="needs-validation" novalidate>
+			<div class="form-group">
+				<label for="pwd">Film Title:</label>
+				<input type="text" class="form-control" id="title" placeholder="Enter Title" required="">
+			</div>
+			<div class="form-group">
+				<label for="uname">Genre:</label>
+				<input type="text" class="form-control" id="uname" placeholder="Enter Genre" required="">
+			</div>
+			<button type="button" class="btn btn-primary" onclick="doRequest()">Submit</button>
+		</form>
+	</div>
+	</div>
+	<!-- Responsive Footer -->
+	<footer class="row w3-blue text-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h1 class="text-center">Design By:</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<a href="https://ide.unpar.ac.id/user/profile.php?id=70110" target="_blank" class="thumbnail">
+						<img src="../images/profile/IndraPermana.jpg">
+					</a>
+				</div>
+				<div class="col-sm-6">
+					<a href="https://ide.unpar.ac.id/user/profile.php?id=70022" target="_blank" class="thumbnail">
+						<img src="../images/profile/JodiTanato.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<h2 class="text-center">Indra Permana Sugianto</h2>
+				</div>
+				<div class="col-sm-6">
+					<h2 class="text-center">Jodi Tanato</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<h4 class="text-center">2017730008</h4>
+				</div>
+				<div class="col-sm-6">
+					<h4 class="text-center">2017730037</h4>
+				</div>
+			</div>
+			<br>
 		</div>
 	</footer>
 </body>
