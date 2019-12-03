@@ -393,13 +393,59 @@ function showSignUp() {
 }
 
 function cek() {
-    if (document.getElementById("inputCaptcha").value != captcha) {
-        alert("Wrong Captcha");
-        document.getElementById("inputCaptcha").value = "";
-    } else {
-        document.getElementById("formSignUp").submit();
-    }
+    var username = document.getElementById("inputUsername").value;
+    var email = document.getElementById("inputEmail").value;
+    var password = document.getElementById("inputPassword").value;
+    var checkbox = document.getElementById("inputCheckBox").checked;
 
+    if (username != "" && email != "" && password != "" && checkbox == true) {
+        if (username != "") {
+            document.getElementById("inputUsername").style.backgroundColor = "white";
+        }
+        if (email != "") {
+            document.getElementById("inputEmail").style.backgroundColor = "white";
+        }
+        if (password != "") {
+            document.getElementById("inputPassword").style.backgroundColor = "white";
+        }
+
+        if (document.getElementById("inputCaptcha").value != captcha) {
+            alert("Wrong Captcha");
+            document.getElementById("inputCaptcha").value = "";
+        } else {
+            document.getElementById("formSignUp").submit();
+        }
+    } else {
+        if (username == "" || email == "" || password == "") {
+            alert("Please Input Your Data Correctly");
+        }
+
+        if (username == "") {
+            document.getElementById("inputUsername").style.backgroundColor = "red";
+        }
+        if (email == "") {
+            document.getElementById("inputEmail").style.backgroundColor = "red";
+        }
+        if (password == "") {
+            document.getElementById("inputPassword").style.backgroundColor = "red";
+        }
+
+        if (username != "") {
+            document.getElementById("inputUsername").style.backgroundColor = "white";
+        }
+        if (email != "") {
+            document.getElementById("inputEmail").style.backgroundColor = "white";
+        }
+        if (password != "") {
+            document.getElementById("inputPassword").style.backgroundColor = "white";
+        }
+
+        if (checkbox == false) {
+            if (username != "" && email != "" && password != "") {
+                alert("Please Accept the Terms And Conditions");
+            }
+        }
+    }
 }
 
 function doRequest() {
